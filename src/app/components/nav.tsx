@@ -6,14 +6,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
 function Nav() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const toggleSidebar = () => {
     setOpen(!open);
-    console.log(open)
   }
   return (
-    <nav className='py-5  mx-20 mb-12 flex justify-between align-middle border'>
+    <nav className='py-5 mx-20 mb-12 flex justify-between align-middle border'>
       <div className='logo'>
         <FaCode className="text-5xl" />
       </div>
