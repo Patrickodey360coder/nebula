@@ -12,17 +12,18 @@ function Nav() {
     setOpen(!open);
   }
   return (
-    <nav className='py-5 mx-20 mb-12 flex justify-between align-middle border'>
+    <nav className='py-5 mx-20 mb-12 flex justify-between align-middle'>
       <div className='logo'>
         <FaCode className="text-5xl" />
       </div>
 
       <div className='hidden md:flex justify-between'>
-        <Link href="#" className="mx-3 py-3">Home</Link>
-        <Link href="#" className="mx-3 py-3">Projects</Link>
-        <Link href="#" className="mx-3 py-3">About</Link>
-        <Link href="#" className="mx-3 py-3">Projects</Link>
-        <Link href="#" className="mx-3 py-3">Blog</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666]">Home</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666]">About</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666]">Tech-Stack</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666]">Projects</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666]">Contact</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666]">Blog</Link>
       </div>
 
       <div className="md:hidden flex justify-center align-middle" onClick={toggleSidebar}>
@@ -34,11 +35,11 @@ function Nav() {
         open && (
           <div className="absolute top-16 left-0 w-full bg-white shadow-lg md:hidden">
             <div className="flex flex-col items-center">
-              <Link href="#" className="mx-3 py-3">Home</Link>
-              <Link href="#" className="mx-3 py-3">Projects</Link>
-              <Link href="#" className="mx-3 py-3">About</Link>
-              <Link href="#" className="mx-3 py-3">Projects</Link>
-              <Link href="#" className="mx-3 py-3">Blog</Link>
+              <Link href="#" className="mx-3 py-3 text-[#666666]">Home</Link>
+              <Link href="#" className="mx-3 py-3 text-[#666666]">Projects</Link>
+              <Link href="#" className="mx-3 py-3 text-[#666666]">About</Link>
+              <Link href="#" className="mx-3 py-3 text-[#666666]">Projects</Link>
+              <Link href="#" className="mx-3 py-3 text-[#666666]">Blog</Link>
             </div>
           </div>
         )
