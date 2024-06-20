@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Typed from 'typed.js';
 import Lottie from 'react-lottie';
 import animationData from '../../lottie/hero.json';
+import Link from 'next/link';
 
 function Hero() {
   const defaultOptions = {
@@ -34,12 +35,17 @@ function Hero() {
         <div className="w-full">
           <h3 className='text-2xl text-[#42446E] font-extrabold'>Hi 👋,</h3>
           <h1 className='text-4xl my-2 text-[#42446E] font-extrabold'>I am Patrick Odey</h1>
-          <h3 className='text-2xl text-[#42446E] font-extrabold'>Software & Developer Relations Engineer</h3>
+          <h3 className='text-2xl mb-1 text-[#42446E] font-extrabold'>Software & Developer Relations Engineer</h3>
           <span ref={element} className="text-[#42446E]" />
 
           <div className='my-5 flex flex-row gap-4 text-[#42446E]'>
-            <Button variant="outline">Resume</Button>
-            <Button variant="outline">GitHub</Button>
+            <Link href="https://drive.google.com/file/d/1yVclSCxCTWojuAkS_p0nqWqo_OW7NB6A/view?usp=sharing" target="_blank">
+              <Button variant="outline">Resume</Button>
+            </Link>
+
+            <Link href="https://github.com/Patrickodey360coder" target="_blank">
+              <Button variant="outline">GitHub</Button>
+            </Link>
           </div>
         </div>
       </div>
