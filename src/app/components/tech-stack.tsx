@@ -13,7 +13,7 @@ import Image from "next/image";
 
 function TechStack() {
   return (
-    <section className='py-5 mx-20 text-center'>
+    <section className='py-5 mx-20 my-20 text-center'>
       <h3 className='text-2xl text-[#42446E] font-extrabold my-10'>My Tech Stack</h3>
 
       <div className='w-full grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-y-6 mt-5 '>
