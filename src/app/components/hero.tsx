@@ -50,7 +50,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className='w-full grid place-items-center'>
+      <div className='hidden w-full sm:hidden md:grid place-items-center'>
         <div className='w-[50%]'>
           <Lottie
             options={defaultOptions} 
