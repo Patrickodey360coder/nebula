@@ -5,7 +5,7 @@ import Projects from "./components/projects";
 import TechStack from "./components/tech-stack";
 import About from "./components/about";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
       <Hero />
@@ -17,3 +17,4 @@ export default function Home() {
     </main>
   );
 }
+
