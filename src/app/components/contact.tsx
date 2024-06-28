@@ -1,26 +1,7 @@
 import React from 'react';
-import dbConnect from '../../../libs/mongoose'
-import Contact from '../../../models/Contact'
+import Contact from '../actions/actions'
 
 async function contactForm() {
-  async function createContact(formData: FormData) {
-    'use server'
-
-    await dbConnect()
-
-    const rawFormData = {
-      firstname: formData.get('firstname'),
-      lastname: formData.get('firstname'),
-      email: formData.get('email'),
-      message: formData.get('message')
-    }
-
-    const contact = new Contact(rawFormData)
-    await contact.save()
-    
-
-    console.log(rawFormData)
-  }
 
   return (
     <section>
@@ -33,7 +14,7 @@ async function contactForm() {
             Send me a message here.
           </p>
         </div>
-        <form action={createContact} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form action={Contact} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
               <label htmlFor="firstname" className="block text-sm font-semibold leading-6 text-[#42446E]">
