@@ -1,4 +1,4 @@
-import Contact from '../../../../models/Contacts'
+import Contact from '../../../../models/Contact'
 import dbConnect from '../../../../libs/mongoose' 
 
 export async function GET() {

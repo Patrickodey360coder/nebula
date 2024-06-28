@@ -1,6 +1,26 @@
 import React from 'react';
+import dbConnect from '../../../libs/mongoose'
+import Contact from '../../../models/Contact'
 
-function Contact() {
+async function contactForm() {
+  async function createContact(formData: FormData) {
+    'use server'
+
+    await dbConnect()
+
+    const rawFormData = {
+      firstname: formData.get('firstname'),
+      lastname: formData.get('firstname'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    }
+
+    const contact = new Contact(rawFormData)
+    await contact.save()
+
+    // console.log(rawFormData)
+  }
+
   return (
     <section>
       <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8"> 
@@ -12,31 +32,31 @@ function Contact() {
             Send me a message here.
           </p>
         </div>
-        <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form action={createContact} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
-              <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-[#42446E]">
+              <label htmlFor="firstname" className="block text-sm font-semibold leading-6 text-[#42446E]">
                 First name
               </label>
               <div className="mt-2.5">
                 <input
                   type="text"
-                  name="first-name"
-                  id="first-name"
+                  name="firstname"
+                  id="firstname"
                   autoComplete="given-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-900 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-[#42446E]">
+              <label htmlFor="lastname" className="block text-sm font-semibold leading-6 text-[#42446E]">
                 Last name
               </label>
               <div className="mt-2.5">
                 <input
                   type="text"
-                  name="last-name"
-                  id="last-name"
+                  name="lastname"
+                  id="lastname"
                   autoComplete="family-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -86,4 +106,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default contactForm;
