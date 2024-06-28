@@ -17,8 +17,9 @@ async function contactForm() {
 
     const contact = new Contact(rawFormData)
     await contact.save()
+    
 
-    // console.log(rawFormData)
+    console.log(rawFormData)
   }
 
   return (
