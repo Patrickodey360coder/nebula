@@ -23,9 +23,9 @@ function About() {
 
         <div className="description text-[#666666] p-5">
           <h3 className='my-3 font-bold text-center sm:text-center md:text-center'> Who is this guy?</h3>
-          <p className='my-3'>I'm a Software Engineer with 3+ years of professional experience. I am interested in all kinds of visual communication but my major focus is on creating mobile, tablet and desktop interfaces. I also have skills in other fields like computer hardwares, hardware troubleshooting, skateboarding and gaming.</p>
+          <p className='my-3'>I am a dedicated and accomplished software engineer with over 4 years of experience in the industry. Throughout my career, I have consistently demonstrated my expertise in various frontend and backend technologies, contributing to numerous successful projects. My journey has been marked by a continuous drive for learning and improvement, enabling me to become proficient in modern frameworks and tools.</p>
 
-          <p>I am passionate about sharing knowledge and learning new technologies from team-mates. I've had the opportunities to be an instructor/mentor in top bootcamps and communities like; Reskill Americans Coding Bootcamp, FrontEnd Foxes Bootcamp, Zuri coding internship, Hotels.ng and other volunteer positions.</p>
+          <p>I am passionate about writing clean, efficient code and am committed to delivering high-quality solutions that meet and exceed client expectations. My experience spans from building robust applications to maintaining and enhancing existing systems, showcasing my versatility and adaptability in the ever-evolving tech landscape.</p>
         </div>
       </div>
     </section>
