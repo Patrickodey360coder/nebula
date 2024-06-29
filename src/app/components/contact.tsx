@@ -13,7 +13,7 @@ async function contactForm() {
   const [ state, formAction ] = useFormState(Contact, initialState)
 
   return (
-    <section>
+    <section className='mx-4 md:mx-20'>
       <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8"> 
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-[#42446E] sm:text-4xl">

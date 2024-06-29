@@ -30,7 +30,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="py-5 mx-20 my-20 flex flex-cols-2">
+    <section className="py-5 mx-4 md:mx-20 my-20 flex flex-cols-2">
       <div className='w-full flex items-center'>
         <div className="w-full">
           <h3 className='text-2xl text-[#42446E] font-extrabold'>Hi 👋,</h3>

@@ -32,7 +32,7 @@ const projects =  [
 
 function Projects() {
   return (
-    <section className='py-5 mx-20 my-20'>
+    <section className='mx-4 md:mx-20 py-5 my-20'>
       <h3 className='text-2xl text-[#42446E] font-extrabold my-10 text-center'>Projects</h3>
       <div className="grid sm:grid-cols-1 md:grid-cols-4 gap-y-6 md:gap-4 place-items-center">
         {projects.map(project => (

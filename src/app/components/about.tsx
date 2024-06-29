@@ -14,7 +14,7 @@ function About() {
 
 
   return (
-    <section className="about mx-20 py-5 my-20">
+    <section className="about py-5 mx-4 md:mx-20 my-20">
       <h3 className="text-2xl text-[#42446E] font-extrabold my-10 text-center">About</h3>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="image">

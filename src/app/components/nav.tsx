@@ -12,7 +12,7 @@ function Nav() {
     setOpen(!open);
   }
   return (
-    <nav className='py-5 mx-20 mb-12 flex justify-between align-middle'>
+    <nav className='py-5 mx-4 md:mx-20 mb-12 flex justify-between align-middle'>
       <div className='logo'>
         <FaCode className="text-5xl" />
       </div>
