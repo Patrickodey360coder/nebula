@@ -3,7 +3,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="p-3 mx-4 md:mx-20 flex justify-between items-center border-t-[1.5px] ">
+    <footer className="p-3 flex justify-between items-center border-t-[1.5px] ">
       <div className='grid grid-cols-5 gap-x-4 text-center text-[#40436C]'>
         <Link href={'/'}>Home</Link>
         <Link href={'/about'}>About</Link>

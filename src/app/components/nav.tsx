@@ -12,9 +12,9 @@ function Nav() {
     setOpen(!open);
   }
   return (
-    <nav className='py-5 mx-4 md:mx-20 mb-12 flex justify-between align-middle'>
+    <nav className='py-4 mx-4 md:mx-20 mb-5 flex justify-between align-middle'>
       <div className='logo'>
-        <FaCode className="text-5xl" />
+        <FaCode className="text-2xl md:text-5xl" />
       </div>
 
       <div className='hidden md:flex justify-between'>
@@ -27,7 +27,7 @@ function Nav() {
       </div>
 
       <div className="md:hidden flex justify-center align-middle" onClick={toggleSidebar}>
-        { open ? <IoMdClose className="text-5xl" /> : <GiHamburgerMenu className="text-5xl"/> }
+        { open ? <IoMdClose className="text-2xl md:text-5xl" /> : <GiHamburgerMenu className="text-2xl lg:text-5xl"/> }
       </div>
 
       {/* Sidebar */}
