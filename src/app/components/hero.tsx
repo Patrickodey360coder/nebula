@@ -19,7 +19,7 @@ function Hero() {
   const element = useRef(null);
   useEffect(() => {
     const typed = new Typed(element.current, {
-      strings: ['Amazing Developer Relations Engineer...', 'Technical writer and community manager...'],
+      strings: ['Developer Relations Engineer...', 'Technical writer...', 'Community manager...'],
       typeSpeed: 50,
       loop: true
     });
