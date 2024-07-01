@@ -26,13 +26,13 @@ function Nav() {
         <Link href="#" className="mx-3 py-3 text-[#666666]">Blog</Link>
       </div>
 
-      {/* <div className="md:hidden flex justify-center align-middle z-20" onClick={toggleSidebar}>
+      <div className="md:hidden flex justify-center align-middle z-20" onClick={toggleSidebar}>
         { open ? '' : <GiHamburgerMenu size={30} className="cursor-pointer" /> }
-      </div> */}
+      </div>
 
       {/* Sidebar */}
 
-      {/* {
+      {
         open && (
           <>
             <div className="bg-black/80 fixed w-full h-screen z-10 top-0 left-0">
@@ -56,7 +56,7 @@ function Nav() {
             </div>
           </>
         )
-      } */}
+      }
 
 
     </nav>
