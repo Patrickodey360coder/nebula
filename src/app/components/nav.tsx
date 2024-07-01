@@ -13,7 +13,7 @@ function Nav() {
   }
   return (
     <nav className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
-      <div className='logo'>
+      <div className='logo cursor-pointer'>
         <FaCode size={30} />
       </div>
 
@@ -27,7 +27,7 @@ function Nav() {
       </div>
 
       <div className="md:hidden flex justify-center align-middle z-20" onClick={toggleSidebar}>
-        { open ? '' : <GiHamburgerMenu size={30} /> }
+        { open ? '' : <GiHamburgerMenu size={30} className="cursor-pointer" /> }
       </div>
 
       {/* Sidebar */}
@@ -38,8 +38,8 @@ function Nav() {
             <div className="bg-black/80 fixed w-full h-screen z-10 top-0 left-0">
             </div>
 
-            <div className="fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" onClick={toggleSidebar}>
-              { open ? <IoMdClose size={30} className="absolute right-4 top-4 cursor-pointer"/> : '' }
+            <div className={ open ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"}>
+              { open ? <IoMdClose size={30} onClick={() => setOpen(!open)} className="absolute right-4 top-4 cursor-pointer"/> : '' }
 
               <FaCode size={30} className="m-4" />
 
