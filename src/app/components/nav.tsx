@@ -39,8 +39,20 @@ function Nav() {
             </div>
 
             <div className="fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" onClick={toggleSidebar}>
-              
               { open ? <IoMdClose size={30} className="absolute right-4 top-4 cursor-pointer"/> : '' }
+
+              <FaCode size={30} className="m-4" />
+
+              <nav>
+                <ul className="flex flex-col font-bold p-4">
+                  <li className="text-xl py-4 flex">Home</li>
+                  <li className="text-xl py-4 flex">About</li>
+                  <li className="text-xl py-4 flex">Tech-Stack</li>
+                  <li className="text-xl py-4 flex">Projects</li>
+                  <li className="text-xl py-4 flex">Contact</li>
+                  <li className="text-xl py-4 flex">Blog</li>
+                </ul>
+              </nav>
             </div>
           </>
         )

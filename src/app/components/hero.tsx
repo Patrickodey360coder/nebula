@@ -30,7 +30,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="py-5 mx-4 md:mx-20 my-20 flex flex-cols-2">
+    <section className="max-w-[1640px] w-full p-4 flex flex-cols-2 mx-auto">
       <div className='w-full flex items-center'>
         <div className="w-full">
           <h3 className='text-2xl text-[#42446E] font-extrabold'>Hi 👋,</h3>
@@ -51,7 +51,7 @@ function Hero() {
       </div>
 
       <div className='hidden w-full sm:hidden md:grid place-items-center'>
-        <div className='w-[50%]'>
+        <div className='w-full'>
           <Lottie
             options={defaultOptions} 
             layout="fill"
