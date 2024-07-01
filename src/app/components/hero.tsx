@@ -30,13 +30,13 @@ function Hero() {
   }, []);
 
   return (
-    <section className="max-w-[1640px] w-full p-4 flex flex-cols-2 mx-auto">
+    <section className="max-w-[1640px] sm:min-h-[500px]  md:min-h-[700px] w-full p-4 flex flex-cols-2 mx-auto">
       <div className='w-full flex items-center'>
         <div className="w-full">
-          <h3 className='text-2xl text-[#42446E] font-extrabold'>Hi 👋,</h3>
-          <h1 className='text-4xl my-2 text-[#42446E] font-extrabold'>I am Patrick Odey</h1>
-          <h3 className='text-2xl mb-1 text-[#42446E] font-extrabold'>Software & Developer Relations Engineer</h3>
-          <span ref={element} className="text-[#42446E]" />
+          <h3 className='text-2xl md:text-3xl lg:text-4xl text-[#42446E] font-extrabold'>Hi 👋,</h3>
+          <h1 className='text-4xl md:text-4xl lg:text-7xl my-2 text-[#42446E] font-extrabold'>I am Patrick Odey</h1>
+          <h3 className='text-2xl md:text-2xl lg:text-3xl mb-1 text-[#42446E] font-extrabold'>Software & Developer Relations Engineer</h3>
+          <span ref={element} className="text-[#42446E] md:text-2xl" />
 
           <div className='my-5 flex flex-row gap-4 text-[#42446E]'>
             <Link href="https://drive.google.com/file/d/1yVclSCxCTWojuAkS_p0nqWqo_OW7NB6A/view?usp=sharing" target="_blank">
@@ -51,7 +51,7 @@ function Hero() {
       </div>
 
       <div className='hidden w-full sm:hidden md:grid place-items-center'>
-        <div className='w-full'>
+        <div className='w-full object-cover'>
           <Lottie
             options={defaultOptions} 
             layout="fill"

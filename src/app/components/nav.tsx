@@ -38,7 +38,7 @@ function Nav() {
             <div className="bg-black/80 fixed w-full h-screen z-10 top-0 left-0">
             </div>
 
-            <div className={ open ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"}>
+            <div className={ open ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-500" : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-500"}>
               { open ? <IoMdClose size={30} onClick={() => setOpen(!open)} className="absolute right-4 top-4 cursor-pointer"/> : '' }
 
               <FaCode size={30} className="m-4" />
