@@ -30,7 +30,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="max-w-[1640px] sm:min-h-[500px]  md:min-h-[700px] w-full p-4 flex flex-cols-2 mx-auto">
+    <section className="min-h-[600px] max-w-[1640px] sm:min-h-[500px] md:min-h-[700px] w-full p-4 flex flex-cols-2 mx-auto">
       <div className='w-full flex items-center'>
         <div className="w-full">
           <h3 className='text-2xl md:text-3xl lg:text-4xl text-[#42446E] font-extrabold'>Hi 👋,</h3>
