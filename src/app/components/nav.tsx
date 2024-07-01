@@ -12,9 +12,9 @@ function Nav() {
     setOpen(!open);
   }
   return (
-    <nav className='py-4 mx-4 md:mx-20 mb-5 flex justify-between align-middle'>
+    <nav className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
       <div className='logo'>
-        <FaCode className="text-2xl md:text-5xl" />
+        <FaCode size={30} />
       </div>
 
       <div className='hidden md:flex justify-between'>
@@ -26,24 +26,27 @@ function Nav() {
         <Link href="#" className="mx-3 py-3 text-[#666666]">Blog</Link>
       </div>
 
-      <div className="md:hidden flex justify-center align-middle" onClick={toggleSidebar}>
-        { open ? <IoMdClose className="text-2xl md:text-5xl" /> : <GiHamburgerMenu className="text-2xl lg:text-5xl"/> }
+      <div className="md:hidden flex justify-center align-middle z-20" onClick={toggleSidebar}>
+        { open ? '' : <GiHamburgerMenu size={30} /> }
       </div>
 
       {/* Sidebar */}
+
       {
         open && (
-          <div className="absolute top-16 left-0 w-full bg-white shadow-lg md:hidden">
-            <div className="flex flex-col items-center">
-              <Link href="#" className="mx-3 py-3 text-[#666666]">Home</Link>
-              <Link href="#" className="mx-3 py-3 text-[#666666]">Projects</Link>
-              <Link href="#" className="mx-3 py-3 text-[#666666]">About</Link>
-              <Link href="#" className="mx-3 py-3 text-[#666666]">Projects</Link>
-              <Link href="#" className="mx-3 py-3 text-[#666666]">Blog</Link>
+          <>
+            <div className="bg-black/80 fixed w-full h-screen z-10 top-0 left-0">
             </div>
-          </div>
+
+            <div className="fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" onClick={toggleSidebar}>
+              
+              { open ? <IoMdClose size={30} className="absolute right-4 top-4 cursor-pointer"/> : '' }
+            </div>
+          </>
         )
       }
+
+
     </nav>
   )
 }
