@@ -13,8 +13,8 @@ import Image from "next/image";
 
 function TechStack() {
   return (
-    <section className='py-5 mx-4 md:mx-20 my-10 text-center'>
-      <h3 className='text-2xl text-[#42446E] font-extrabold my-10'>My Tech Stack</h3>
+    <section className='max-w-[1640px] p-4'>
+      <h3 className='text-center text-2xl text-[#42446E] font-extrabold my-10'>My Tech Stack</h3>
 
       <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-y-6 mt-5 '>
         <div className="text-5xl text-[#00D8FF]"><FaReact /></div>
