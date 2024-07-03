@@ -18,8 +18,8 @@ function Nav() {
       </div>
 
       <div className='hidden md:flex justify-between'>
-        <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Home</Link>
-        <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">About</Link>
+        <Link href="/" className="mx-3 py-3 text-[#666666] cursor-pointer">Home</Link>
+        <Link href="/about" className="mx-3 py-3 text-[#666666] cursor-pointer">About</Link>
         <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Tech-Stack</Link>
         <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Projects</Link>
         <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Contact</Link>
@@ -51,12 +51,6 @@ function Nav() {
                   <li className="text-xl py-4 flex"><Link href="/project">Projects</Link></li>
                   <li className="text-xl py-4 flex"><Link href="/contact">Contacts</Link></li>
                   <li className="text-xl py-4 flex"><Link href="/blog">Blog</Link></li>
-
-                  {/* <li className="text-xl py-4 flex">About</li>
-                  <li className="text-xl py-4 flex">Tech-Stack</li>s
-                  <li className="text-xl py-4 flex">Projects</li>
-                  <li className="text-xl py-4 flex">Contact</li>
-                  <li className="text-xl py-4 flex">Blog</li> */}
                 </ul>
               </nav>
             </div>
