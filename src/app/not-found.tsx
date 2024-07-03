@@ -6,11 +6,12 @@ import Footer from './components/footer'
 
 const NotFound = () => {
   return (
-    <div>
+    <>
+      <Nav/>
       <h2>Not Found</h2>
       <p>Could not find requested resource</p>
       <Link href="/">Return Home</Link>
-    </div>
+    </>
   )
 }
 
