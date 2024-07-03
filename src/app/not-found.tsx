@@ -13,6 +13,7 @@ const NotFound = () => {
         <p>Could not find requested resource</p>
         <Link href="/">Return Home</Link>
       </section>
+      <Footer/>
     </>
   )
 }
