@@ -18,12 +18,12 @@ function Nav() {
       </div>
 
       <div className='hidden md:flex justify-between'>
-        <Link href="#" className="mx-3 py-3 text-[#666666]">Home</Link>
-        <Link href="#" className="mx-3 py-3 text-[#666666]">About</Link>
-        <Link href="#" className="mx-3 py-3 text-[#666666]">Tech-Stack</Link>
-        <Link href="#" className="mx-3 py-3 text-[#666666]">Projects</Link>
-        <Link href="#" className="mx-3 py-3 text-[#666666]">Contact</Link>
-        <Link href="#" className="mx-3 py-3 text-[#666666]">Blog</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Home</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">About</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Tech-Stack</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Projects</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Contact</Link>
+        <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Blog</Link>
       </div>
 
       <div className="md:hidden flex justify-center align-middle z-20" onClick={toggleSidebar}>
@@ -39,7 +39,7 @@ function Nav() {
             </div>
 
             <div className={ open ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-500" : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-500"}>
-              { open ? <IoMdClose size={30} onClick={() => setOpen(!open)} className="absolute right-4 top-4 cursor-pointer"/> : '' }
+              { open ? <IoMdClose size={30} onClick={toggleSidebar} className="absolute right-4 top-4 cursor-pointer"/> : '' }
 
               <FaCode size={30} className="m-4" />
 

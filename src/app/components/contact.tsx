@@ -16,7 +16,7 @@ async function contactForm() {
     <section className='max-w-[1640px] mx-auto'>
       <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8"> 
         <div className="mx-auto max-w-2xl text-center">
-          <h3 className="text-2xl text-[#42446E] font-extrabold my-10 text-center tracking-tight">
+          <h3 className="text-2xl text-[#42446E] font-extrabold text-center tracking-tight">
             Contact Me
           </h3>
           <p className="mt-2 text-lg leading-8 text-[#666666]">
