@@ -45,12 +45,18 @@ function Nav() {
 
               <nav>
                 <ul className="flex flex-col font-bold p-4">
-                  <li className="text-xl py-4 flex">Home</li>
-                  <li className="text-xl py-4 flex">About</li>
-                  <li className="text-xl py-4 flex">Tech-Stack</li>
+                  <li className="text-xl py-4 flex"><Link href="/">Home</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="/about">About</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="/techstack">Tech-Stack</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="/project">Projects</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="/contact">Contacts</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="/blog">Blog</Link></li>
+
+                  {/* <li className="text-xl py-4 flex">About</li>
+                  <li className="text-xl py-4 flex">Tech-Stack</li>s
                   <li className="text-xl py-4 flex">Projects</li>
                   <li className="text-xl py-4 flex">Contact</li>
-                  <li className="text-xl py-4 flex">Blog</li>
+                  <li className="text-xl py-4 flex">Blog</li> */}
                 </ul>
               </nav>
             </div>
