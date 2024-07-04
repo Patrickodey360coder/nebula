@@ -20,12 +20,13 @@ const schema = z.object({
 
 const contactForm = async ( formData: FormData ) => {
   await dbConnect();
+
   try {
       const rawFormData = {
-        firstname: formData.get('firstname'),
-        lastname: formData.get('lastname'),
-        email: formData.get('email'),
-        message: formData.get('message')
+        firstname: formData.get('firstname') as string,
+        lastname: formData.get('lastname') as string,
+        email: formData.get('email') as string,
+        message: formData.get('message') as string
       }
 
       const validationResult = schema.safeParse(rawFormData); 
