@@ -12,7 +12,7 @@ function Nav() {
     setOpen(!open);
   }
   return (
-    <nav className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
+    <nav className='max-w-[1640px] mx-auto flex justify-between items-center p-4 text-[#42446E]'>
       <div className='logo cursor-pointer'>
         <FaCode size={30} />
       </div>
@@ -42,15 +42,14 @@ function Nav() {
               { open ? <IoMdClose size={30} onClick={() => setOpen(!open)} className="absolute right-4 top-4 cursor-pointer"/> : '' }
 
               <FaCode size={30} className="m-4" />
-
+              
               <nav>
                 <ul className="flex flex-col font-bold p-4">
-                  <li className="text-xl py-4 flex">Home</li>
-                  <li className="text-xl py-4 flex">About</li>
-                  <li className="text-xl py-4 flex">Tech-Stack</li>
-                  <li className="text-xl py-4 flex">Projects</li>
-                  <li className="text-xl py-4 flex">Contact</li>
-                  <li className="text-xl py-4 flex">Blog</li>
+                  <li className="text-xl py-4 flex"><Link href="/">Home</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="/techstack">Tech-Stack</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="/projects">Projects</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="/contact">Contact</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="/blog">Blog</Link></li>
                 </ul>
               </nav>
             </div>

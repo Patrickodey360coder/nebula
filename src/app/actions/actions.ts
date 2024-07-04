@@ -3,30 +3,23 @@ import dbConnect from "../../../libs/mongoose";
 import Contact from "../../../models/Contact";
 import { z } from 'zod'
 
-dbConnect();
-
 const schema = z.object({
   email: z.string().email({
     message: "Email is required",
   }),
-  firstname: z.string({
+  firstname: z.string().min(1, {
     message: "firstname is required",
-    required_error: "firstname is required",
-    invalid_type_error: "firstname must be a string"
   }),
-  lastname: z.string({
+  lastname: z.string().min(1, {
     message: "lastname is required",
-    required_error: "lastname is required",
-    invalid_type_error: "lastname must be a string"
-  }),
-  message: z.string({
+  }).max(100),
+  message: z.string().min(10, {
     message: "Message is required",
-    required_error: "Message is required",
-    invalid_type_error: "message must be a string"
   }),
 });
 
-const contactForm = async (prevState: any, formData: FormData ) => {
+const contactForm = async ( formData: FormData ) => {
+  await dbConnect();
   try {
       const rawFormData = {
         firstname: formData.get('firstname'),
