@@ -65,7 +65,7 @@ const ContactForm = () => {
                   autoComplete="family-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
-                { state?.errors?.message && <small className='text-red-600'>{ state.errors.message }</small> }
+                { state?.errors?.lastname && <small className='text-red-600'>{ state.errors.lastname }</small> }
               </div>
             </div>
             <div className="sm:col-span-2">
@@ -80,8 +80,7 @@ const ContactForm = () => {
                   autoComplete="email"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
-                <small>{state?.message}</small>
-                <small>{state?.errors?.server}</small>
+                { state?.errors?.email && <small className='text-red-600'>{ state.errors.email }</small> }
               </div>
             </div>
 
