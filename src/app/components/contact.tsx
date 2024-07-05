@@ -8,7 +8,7 @@ const initialState = {
   message: '',
 }
 
-async function contactForm() {
+const ContactForm = () => {
 
   const [ state, formAction ] = useFormState(Contact, initialState)
 
@@ -60,7 +60,7 @@ async function contactForm() {
               </label>
               <div className="mt-2.5">
                 <input
-                  // type="email"
+                  type="email"
                   name="email"
                   id="email"
                   autoComplete="email"
@@ -94,4 +94,4 @@ async function contactForm() {
   );
 }
 
-export default contactForm;
+export default ContactForm;
