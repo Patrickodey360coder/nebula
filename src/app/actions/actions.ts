@@ -32,7 +32,8 @@ const contactForm = async (prevState: any, formData: FormData ) => {
       
       if (!validationResult.success) {
         return {
-          errors: validationResult.error.flatten().fieldErrors
+          message: "failed to validate"
+          
         };
       }
       const validatedData = validationResult.data
