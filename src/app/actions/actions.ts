@@ -18,7 +18,7 @@ const schema = z.object({
   }),
 });
 
-const contactForm = async (prevState: any, formData: FormData ) => {
+const ContactForm = async (prevState: any, formData: FormData ) => {
   await dbConnect();
   try {
       const rawFormData = {
@@ -53,4 +53,4 @@ const contactForm = async (prevState: any, formData: FormData ) => {
   }
 }
 
-export default contactForm
+export default ContactForm
