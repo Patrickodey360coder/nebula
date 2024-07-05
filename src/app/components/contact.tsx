@@ -4,15 +4,20 @@ import Contact from '../actions/actions'
 import SubmitButton from './button';
 import { useFormState } from 'react-dom'; 
 
-const initialState = {
-  message: '',
+type FormState = {
+  message: string;
   errors: {
-    server: '',
-    firstname: '',
-    lastname: '',
-    email: '',
-    message: '',
+    server?: string;
+    firstname?: string;
+    lastname?: string;
+    email?: string;
+    message?: string;
   }
+}
+
+const initialState: FormState = {
+  message: '',
+  errors: {}
 };
 
 const ContactForm = () => {
