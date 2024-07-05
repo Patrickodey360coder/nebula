@@ -33,7 +33,8 @@ const ContactForm = async (prevState: any, formData: FormData ) => {
       if (!validationResult.success) {
         const validationErrors = validationResult.error.flatten();
         return {
-          errors: validationErrors.fieldErrors
+          errors: validationErrors.fieldErrors,
+          message: "failed to validate"
         };
       }
 
@@ -43,12 +44,14 @@ const ContactForm = async (prevState: any, formData: FormData ) => {
       await contact.save()
 
       return {
-        message: "Form Submitted Successfully"
+        message: "Form Submitted Successfully",
+        errors: {}
       }
 
   } catch (error) {
       return {
-        errors: { server: "An error occurred while submitting the form" }
+        errors: { server: "An error occurred while submitting the form" },
+        message: ""
       };
   }
 }
