@@ -18,8 +18,8 @@ const schema = z.object({
   }),
 });
 
-const contactForm = async ( formData: FormData ) => {
-  await dbConnect();
+const contactForm = async ( prevState: any, formData: FormData ) => {
+  dbConnect();
 
   try {
       const rawFormData = {
