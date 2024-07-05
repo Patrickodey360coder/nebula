@@ -4,6 +4,7 @@ import Contact from '../actions/actions'
 import SubmitButton from './button';
 import { useFormState } from 'react-dom'; 
 
+
 const initialState = {
   message: '',
 }
