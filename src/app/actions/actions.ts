@@ -31,12 +31,13 @@ const contactForm = async (prevState: any, formData: FormData ) => {
       const validationResult = schema.safeParse(rawFormData); 
       
       if (!validationResult.success) {
+        const validationErrors = validationResult.error.flatten();
         return {
-          message: "failed to validate"
-          
+          errors: validationErrors.fieldErrors
         };
       }
-      const validatedData = validationResult.data
+
+      const validatedData = validationResult.data;
 
       const contact = new Contact(validatedData)
       await contact.save()
