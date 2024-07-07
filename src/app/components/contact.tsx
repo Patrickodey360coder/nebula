@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Contact from '../actions/actions'
 import SubmitButton from './button';
 import { useFormState } from 'react-dom'; 
@@ -24,22 +24,28 @@ const ContactForm = () => {
 
   const [ state, formAction ] = useFormState<typeof initialState>(Contact, initialState);
   const [ showAlert, setShowAlert ] = useState(false);
+  const formRef = useRef(null)
 
   useEffect(() => {
     if (state.message) {
       setShowAlert(true);
       const timer = setTimeout(() => {
         setShowAlert(false);
-        formAction.reset();
       }, 5000);
-
       return () => clearTimeout(timer);
     }
-  }, [state.message, formAction]);
+  },[state.message]);
+
+  const resetForm = () => {
+    if(formRef.current) {
+      formRef.current;
+    }
+    formAction()
+  }
 
   const handleCloseAlert = () => {
     setShowAlert(false);
-    formAction.reset();
+    resetForm()
   };
 
   return (
@@ -84,7 +90,7 @@ const ContactForm = () => {
 
 
 
-        <form action={formAction} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form ref={formRef} action={formAction} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
               <label htmlFor="firstname" className="block text-sm font-semibold leading-6 text-[#42446E]">
