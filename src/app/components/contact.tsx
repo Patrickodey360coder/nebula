@@ -38,7 +38,7 @@ const ContactForm = () => {
 
   const resetForm = () => {
     if(formRef.current) {
-      formRef.current.reset();
+      formRef.current;
     }
     formAction()
   }
