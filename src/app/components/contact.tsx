@@ -60,13 +60,13 @@ const ContactForm = () => {
           </p>
         </div>
 
-        {/* {state.message && (
+        {state.message && (
           <div className="mx-auto mt-4 max-w-xl sm:mt-6">
             <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
               <span className="block sm:inline">{state.message}</span>
             </div>
           </div>
-        )} */}
+        )}
 
         {showAlert && (
           <div className="mx-auto mt-4 max-w-xl sm:mt-6">
