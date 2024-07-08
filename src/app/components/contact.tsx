@@ -138,6 +138,7 @@ const ContactForm = () => {
               </label>
               <div className="mt-2.5">
                 <input
+                  {...register("email")}
                   type="email"
                   name="email"
                   id="email"
