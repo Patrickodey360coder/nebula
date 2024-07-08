@@ -23,28 +23,33 @@ const initialState: FormState = {
 
 const ContactForm = () => {
 
-  const { register, handleSubmit, reset } = useForm();
+  const { 
+    register, 
+    handleSubmit, 
+    reset,
+    formState: { errors } 
+  } = useForm();
   const [ state, formAction ] = useFormState<typeof initialState>(Contact, initialState);
-  const [ showAlert, setShowAlert ] = useState(false);
+  // const [ showAlert, setShowAlert ] = useState(false);
   const formRef = useRef(null)
 
-  useEffect(() => {
-    if (state.message) {
-      setShowAlert(true);
-    }
-  },[state.message]);
+  // useEffect(() => {
+  //   if (state.message) {
+  //     setShowAlert(true);
+  //   }
+  // },[state.message]);
 
-  const resetForm = () => {
-    if(formRef.current) {
-      formRef.current.reset();
-    }
-    formAction()
-  }
+  // const resetForm = () => {
+  //   if(formRef.current) {
+  //     formRef.current.reset();
+  //   }
+  //   formAction()
+  // }
 
-  const handleCloseAlert = () => {
-    setShowAlert(false);
-    resetForm()
-  };
+  // const handleCloseAlert = () => {
+  //   setShowAlert(false);
+  //   resetForm()
+  // };
 
   const onSubmit = (data: unknown) => console.log(data)
 
@@ -108,7 +113,10 @@ const ContactForm = () => {
               </label>
               <div className="mt-2.5">
                 <input
-                  {...register("firstname")}
+                  {...register("firstname"), {
+                    required: true,
+                    minLength: 2
+                  }}
                   type="text"
                   name="firstname"
                   id="firstname"
@@ -123,7 +131,10 @@ const ContactForm = () => {
               </label>
               <div className="mt-2.5">
                 <input
-                  {...register("lastname")}
+                  {...register("lastname"), {
+                    required: true,
+                    minLength: 2
+                  }}
                   type="text"
                   name="lastname"
                   id="lastname"
@@ -154,6 +165,7 @@ const ContactForm = () => {
               </label>
               <div className="mt-2.5">
                 <textarea
+                  {...register("message")}
                   name="message"
                   id="message"
                   rows={4}
