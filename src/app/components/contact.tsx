@@ -16,17 +16,17 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 //   }
 // }
 
+// const initialState: FormState = {
+//   message: '',
+//   errors: {}
+// };
+
 type FormTypes = {
   firstname: string;
   lastname: string;
   email: string;
   message: string
 }
-
-// const initialState: FormState = {
-//   message: '',
-//   errors: {}
-// };
 
 const ContactForm = () => {
 
@@ -141,7 +141,7 @@ const ContactForm = () => {
 
           </div>
           <div className="mt-10">
-            <SubmitButton/>
+            <SubmitButton isSubmitting={isSubmitting} />
           </div>
         </form>
 
