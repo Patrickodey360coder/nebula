@@ -33,8 +33,10 @@ const ContactForm = () => {
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<FormTypes>();
 
   const onSubmit: SubmitHandler<FormTypes> = async (data: FormTypes) => { 
-    console.log(data)
-    reset();
+    setTimeout(() => {
+      console.log(data)
+      reset();
+    }, 3000)
   }
 
   return (
