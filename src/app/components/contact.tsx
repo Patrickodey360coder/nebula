@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Contact from '../actions/actions'
 import SubmitButton from './button';
 import { useFormState } from 'react-dom'; 
-import type { FieldValues } from 'react-hook-form';
+import type { FieldValues, useForm } from 'react-hook-form';
 
 
 type FormState = {
