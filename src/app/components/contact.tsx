@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Contact from '../actions/actions'
 import SubmitButton from './button';
 import { useFormState } from 'react-dom'; 
-import { FieldValues, useForm } from 'react-hook-form';
+import type { FieldValues } from 'react-hook-form';
 
 
 type FormState = {
@@ -34,8 +34,8 @@ const ContactForm = () => {
   const { 
     register, 
     handleSubmit,
-    formState: { errors }, 
-    reset } = useForm();
+    formState: { errors, isSubmitting }, 
+    reset } = useForm<FieldValues>();
   const [ state, formAction ] = useFormState<typeof initialState>(Contact, initialState);
   const [ showAlert, setShowAlert ] = useState(false);
   const formRef = useRef(null)
@@ -96,7 +96,7 @@ const ContactForm = () => {
                   autoComplete="given-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-900 sm:text-sm sm:leading-6"
                 />
-                {errors.firstname && <small className='text-read-500'>{errors.firstname.message}</small> }
+                {errors.firstname && <small className='text-read-500'>{errors?.firstname?.message}</small> }
               </div>
             </div>
             <div>
