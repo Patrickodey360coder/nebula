@@ -2,21 +2,19 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Contact from '../actions/actions'
 import SubmitButton from './button';
-import { useFormState } from 'react-dom'; 
-import type { FieldValues } from 'react-hook-form';
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 
-type FormState = {
-  message: string;
-  errors: {
-    server?: string;
-    firstname?: string;
-    lastname?: string;
-    email?: string;
-    message?: string;
-  }
-}
+// type FormState = {
+//   message: string;
+//   errors: {
+//     server?: string;
+//     firstname?: string;
+//     lastname?: string;
+//     email?: string;
+//     message?: string;
+//   }
+// }
 
 type FormTypes = {
   firstname: string;
@@ -25,27 +23,18 @@ type FormTypes = {
   message: string
 }
 
-const initialState: FormState = {
-  message: '',
-  errors: {}
-};
+// const initialState: FormState = {
+//   message: '',
+//   errors: {}
+// };
 
 const ContactForm = () => {
 
-  const { 
-    register, 
-    handleSubmit,
-    formState: { errors, isSubmitting }, 
-    reset } = useForm<FieldValues>();
-  const [ state, formAction ] = useFormState<typeof initialState>(Contact, initialState);
-  const [ showAlert, setShowAlert ] = useState(false);
+  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<FormTypes>();
 
-  const handleCloseAlert = () => {
-    setShowAlert(false);
-  };
-
-  const onSubmit = async (data: FieldValues) => { 
+  const onSubmit: SubmitHandler<FormTypes> = async (data: FormTypes) => { 
     console.log(data)
+    reset();
   }
 
   return (
@@ -62,7 +51,7 @@ const ContactForm = () => {
 
  
 
-        <form onSubmit={handleSubmit(onSubmit)} action={formAction} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form onSubmit={handleSubmit(onSubmit)} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
               <label htmlFor="firstname" className="block text-sm font-semibold leading-6 text-[#42446E]">
@@ -82,7 +71,7 @@ const ContactForm = () => {
                   autoComplete="given-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-900 sm:text-sm sm:leading-6"
                 />
-                {errors.firstname && <small className='text-red-500'>{errors.firstname.message}</small> }
+                {errors.firstname && <small className='text-red-500'>{errors.firstname.message as string}</small> }
               </div>
             </div>
             <div>
@@ -104,7 +93,7 @@ const ContactForm = () => {
                   autoComplete="family-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
-                {errors.lastname && <small className='text-red-500'>{errors.lastname.message}</small> }
+                {errors.lastname && <small className='text-red-500'>{errors.lastname.message as string}</small> }
               </div>
             </div>
             <div className="sm:col-span-2">
@@ -123,7 +112,7 @@ const ContactForm = () => {
                   autoComplete="email"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
-                {errors.email && <small className='text-red-500'>{errors.email.message}</small> }
+                {errors.email && <small className='text-red-500'>{errors.email.message as string}</small> }
 
               </div>
             </div>
@@ -146,7 +135,7 @@ const ContactForm = () => {
                   rows={4}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
-                {errors.message && <small className='text-red-500'>{errors.message.message}</small> }
+                {errors.message && <small className='text-red-500'>{errors.message.message as string}</small> }
               </div>
             </div>
 
