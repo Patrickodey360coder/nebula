@@ -39,24 +39,9 @@ const ContactForm = () => {
     reset } = useForm<FieldValues>();
   const [ state, formAction ] = useFormState<typeof initialState>(Contact, initialState);
   const [ showAlert, setShowAlert ] = useState(false);
-  const formRef = useRef(null)
-
-  useEffect(() => {
-    if (state.message) {
-      setShowAlert(true);
-    }
-  },[state.message]);
-
-  const resetForm = () => {
-    if(formRef.current) {
-      formRef.current.reset();
-    }
-    formAction()
-  }
 
   const handleCloseAlert = () => {
     setShowAlert(false);
-    resetForm()
   };
 
   const onSubmit = async (data: FieldValues) => { 
@@ -130,10 +115,7 @@ const ContactForm = () => {
                 <input
                   {...register("email", {
                     required: "email is required",
-                    minLength: {
-                      value: 2,
-                      message: "Cannot use less than 2 characters"
-                    }
+                    pattern: { value: /^[^@]+@[^@]+\.[^@]+$/, message: "Invalid email address" } 
                   })}
                   type="email"
                   name="email"
