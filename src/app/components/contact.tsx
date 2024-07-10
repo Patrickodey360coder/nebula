@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Contact from '../actions/actions'
 import SubmitButton from './button';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { resolve } from 'path';
 
 
 // type FormState = {
@@ -32,11 +33,10 @@ const ContactForm = () => {
 
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<FormTypes>();
 
-  const onSubmit: SubmitHandler<FormTypes> = async (data: FormTypes) => { 
-    setTimeout(() => {
-      console.log(data)
-      reset();
-    }, 3000)
+  const onSubmit = async (data: FormTypes) => { 
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    reset();
+    console.log(data)
   }
 
   return (
@@ -143,7 +143,8 @@ const ContactForm = () => {
 
           </div>
           <div className="mt-10">
-            <SubmitButton isSubmitting={isSubmitting} />
+            {/* <SubmitButton isSubmitting={isSubmitting} /> */}
+            <button className="border p-5" disabled={isSubmitting}>{isSubmitting ? "sending..." : "lets talk"}</button>
           </div>
         </form>
 
