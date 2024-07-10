@@ -1,42 +1,33 @@
 "use client"
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Contact from '../actions/actions'
 import SubmitButton from './button';
-import { useForm, SubmitHandler } from 'react-hook-form';
-import { resolve } from 'path';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { TSignUpSchema } from '../../../libs/types';
+import { signUpSchema } from '../../../libs/types';
 
-
-// type FormState = {
-//   message: string;
-//   errors: {
-//     server?: string;
-//     firstname?: string;
-//     lastname?: string;
-//     email?: string;
-//     message?: string;
-//   }
-// }
-
-// const initialState: FormState = {
-//   message: '',
-//   errors: {}
-// };
-
-type FormTypes = {
-  firstname: string;
-  lastname: string;
-  email: string;
-  message: string
-}
 
 const ContactForm = () => {
 
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<FormTypes>();
+  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<TSignUpSchema>({
+    resolver: zodResolver(signUpSchema),
+  });
 
-  const onSubmit = async (data: FormTypes) => { 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    reset();
-    console.log(data)
+  const onSubmit = async (data: TSignUpSchema) => { 
+    const formData = new FormData();
+    formData.append('firstname', data.firstname);
+    formData.append('lastname', data.lastname);
+    formData.append('email', data.email);
+    formData.append('message', data.message);
+
+    const response = await Contact({}, formData)
+
+    if (response.errors) {
+      console.log(response.errors)
+    } else {
+      console.log(response.message);
+    }
   }
 
   return (
@@ -143,8 +134,7 @@ const ContactForm = () => {
 
           </div>
           <div className="mt-10">
-            {/* <SubmitButton isSubmitting={isSubmitting} /> */}
-            <button className="border p-5" disabled={isSubmitting}>{isSubmitting ? "sending..." : "lets talk"}</button>
+            <SubmitButton isSubmitting={isSubmitting} />
           </div>
         </form>
 

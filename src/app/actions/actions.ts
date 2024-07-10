@@ -1,22 +1,7 @@
 "use server"
 import dbConnect from "../../../libs/mongoose";
 import Contact from "../../../models/Contact";
-import { z } from 'zod'
-
-const schema = z.object({
-  email: z.string().email({
-    message: "Email is required",
-  }),
-  firstname: z.string().min(2, {
-    message: "firstname is required"
-  }),
-  lastname: z.string().min(2, {
-    message: "Last name is required"
-  }),
-  message: z.string().min(2, {
-    message: "Message field is required"
-  }),
-});
+import { signUpSchema } from "../../../libs/types";
 
 const ContactForm = async (prevState: any, formData: FormData ) => {
   await dbConnect();
@@ -28,13 +13,13 @@ const ContactForm = async (prevState: any, formData: FormData ) => {
         message: formData.get('message')
       }
 
-      const validationResult = schema.safeParse(rawFormData); 
+      const validationResult = signUpSchema.safeParse(rawFormData); 
       
       if (!validationResult.success) {
         const validationErrors = validationResult.error.flatten();
         return {
           errors: validationErrors.fieldErrors,
-          // message: "failed to validate"
+          message: "failed to validate"
         };
       }
 
