@@ -54,7 +54,6 @@ function Hero() {
         <div className='w-full object-cover'>
           <Lottie
             options={defaultOptions} 
-            layout="fill"
           />
         </div>
       </div>

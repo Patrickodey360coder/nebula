@@ -7,20 +7,19 @@ const schema = z.object({
   email: z.string().email({
     message: "Email is required",
   }),
-  firstname: z.string().min(1, {
-    message: "firstname is required",
+  firstname: z.string().min(2, {
+    message: "firstname is required"
   }),
-  lastname: z.string().min(1, {
-    message: "lastname is required",
-  }).max(100),
-  message: z.string().min(10, {
-    message: "Message is required",
+  lastname: z.string().min(2, {
+    message: "Last name is required"
+  }),
+  message: z.string().min(2, {
+    message: "Message field is required"
   }),
 });
 
-const contactForm = async ( prevState: any, formData: FormData ) => {
-  dbConnect();
-
+const ContactForm = async (prevState: any, formData: FormData ) => {
+  await dbConnect();
   try {
       const rawFormData = {
         firstname: formData.get('firstname') as string,
@@ -32,11 +31,13 @@ const contactForm = async ( prevState: any, formData: FormData ) => {
       const validationResult = schema.safeParse(rawFormData); 
       
       if (!validationResult.success) {
+        const validationErrors = validationResult.error.flatten();
         return {
-          errors: validationResult.error.flatten().fieldErrors
+          errors: validationErrors.fieldErrors
         };
       }
-      const validatedData = validationResult.data
+
+      const validatedData = validationResult.data;
 
       const contact = new Contact(validatedData)
       await contact.save()
@@ -52,4 +53,4 @@ const contactForm = async ( prevState: any, formData: FormData ) => {
   }
 }
 
-export default contactForm
+export default ContactForm

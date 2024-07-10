@@ -4,26 +4,47 @@ import Contact from '../actions/actions'
 import SubmitButton from './button';
 import { useFormState } from 'react-dom'; 
 
-const initialState = {
-  message: '',
-  // errors: {}
+type FormState = {
+  message: string;
+  errors: {
+    server?: string;
+    firstname?: string;
+    lastname?: string;
+    email?: string;
+    message?: string;
+  }
 }
 
-async function contactForm() {
+const initialState: FormState = {
+  message: '',
+  errors: {}
+};
 
-  const [ state, formAction ] = useFormState(Contact, initialState);
+const ContactForm = () => {
+
+  const [ state, formAction ] = useFormState<typeof initialState>(Contact, initialState)
 
   return (
     <section className='max-w-[1640px] mx-auto'>
       <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8"> 
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[#42446E] sm:text-4xl">
+          <h3 className="text-2xl text-[#42446E] font-extrabold text-center tracking-tight">
             Contact Me
-          </h2>
+          </h3>
           <p className="mt-2 text-lg leading-8 text-[#666666]">
             Send me a message here.
           </p>
         </div>
+
+        {state.message && (
+          <div className="mx-auto mt-4 max-w-xl sm:mt-6">
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+              <span className="block sm:inline">{state.message}</span>
+            </div>
+          </div>
+        )}
+
+
 
         <form action={formAction} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -39,7 +60,7 @@ async function contactForm() {
                   autoComplete="given-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-900 sm:text-sm sm:leading-6"
                 />
-                {state?.message}
+                { state?.errors?.firstname && <small className='text-red-600'>{ state.errors.firstname }</small> }
               </div>
             </div>
             <div>
@@ -54,6 +75,7 @@ async function contactForm() {
                   autoComplete="family-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
+                { state?.errors?.lastname && <small className='text-red-600'>{ state.errors.lastname }</small> }
               </div>
             </div>
             <div className="sm:col-span-2">
@@ -62,15 +84,13 @@ async function contactForm() {
               </label>
               <div className="mt-2.5">
                 <input
-                  // type="email"
+                  type="email"
                   name="email"
                   id="email"
                   autoComplete="email"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
-                <small>{state.message}</small>
-                {/* <small>{errors?.server}</small> */}
-
+                { state?.errors?.email && <small className='text-red-600'>{ state.errors.email }</small> }
               </div>
             </div>
 
@@ -82,9 +102,10 @@ async function contactForm() {
                 <textarea
                   name="message"
                   id="message"
-                  rows="4"
+                  rows={4}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-[#42446E] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
+                { state?.errors?.message && <small className='text-red-600'>{ state.errors.message }</small> }
               </div>
             </div>
 
@@ -98,4 +119,4 @@ async function contactForm() {
   );
 }
 
-export default contactForm;
+export default ContactForm;

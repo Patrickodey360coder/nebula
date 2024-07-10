@@ -10,6 +10,6 @@ export default async function dbConnect() {
     await mongoose.connect(uri)
     console.log("database has been connected")
   } catch(error) {
-    handleError(error)
+    console.log(error);
   }
 }
