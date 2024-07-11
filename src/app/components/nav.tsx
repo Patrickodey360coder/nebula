@@ -22,11 +22,11 @@ function Nav() {
 
       <div className='hidden md:flex justify-between'>
         <Link href="/" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "/" ? "active" : ""}`}>Home</Link>
-        <Link href="#about" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "#about" ? "active" : ""}`}>About</Link>
-        <Link href="#techstack" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "#techstack" ? "active" : ""}`}>Tech-Stack</Link>
-        <Link href="#projects" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "#projects" ? "active" : ""}`}>Projects</Link>
-        <Link href="#contact" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "#contact" ? "active" : ""}`}>Contact</Link>
-        <Link href="/" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "/blog" ? "active" : ""}`}>Blog</Link>
+        <Link href="#" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "#about" ? "active" : ""}`}>About</Link>
+        <Link href="#" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "#techstack" ? "active" : ""}`}>Tech-Stack</Link>
+        <Link href="#" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "#projects" ? "active" : ""}`}>Projects</Link>
+        <Link href="#" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "#contact" ? "active" : ""}`}>Contact</Link>
+        <Link href="/blog" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "/blog" ? "active" : ""}`}>Blog</Link>
       </div>
 
       <div className="md:hidden flex justify-center align-middle z-20" onClick={toggleSidebar}>
