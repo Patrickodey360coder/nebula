@@ -4,9 +4,14 @@ import Link from "next/link";
 import { FaCode } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import { useRouter } from "next/navigation";
+import { usePathname, useSearchParams } from 'next/navigation'
+
 
 function Nav() {
   const [open, setOpen] = useState<boolean>(false);
+  const path = usePathname();
+  console.log(path)
 
   const toggleSidebar = () => {
     setOpen(!open);
@@ -18,12 +23,12 @@ function Nav() {
       </div>
 
       <div className='hidden md:flex justify-between'>
-        <Link href="/" className="mx-3 py-3 text-[#666666] cursor-pointer">Home</Link>
+        <Link href="/" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "/" ? "active" : ""}`}>Home</Link>
         <Link href="/about" className="mx-3 py-3 text-[#666666] cursor-pointer">About</Link>
         <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Tech-Stack</Link>
         <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Projects</Link>
         <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Contact</Link>
-        <Link href="#" className="mx-3 py-3 text-[#666666] cursor-pointer">Blog</Link>
+        <Link href="/blog" className="mx-3 py-3 text-[#666666] cursor-pointer">Blog</Link>
       </div>
 
       <div className="md:hidden flex justify-center align-middle z-20" onClick={toggleSidebar}>
