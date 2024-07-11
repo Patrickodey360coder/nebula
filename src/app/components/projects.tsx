@@ -1,7 +1,15 @@
 import React from 'react'
 import ProjectCard from './project-card'
 
-const projects =  [
+type Project = {
+  title: string;
+  picture: string;
+  preview: string;
+  github?: string;
+  description: string;
+}
+
+const projects: Project[] =  [
   {
     title: "Cov19Strain",
     picture: "/images/covistrain.jpg",
@@ -30,7 +38,7 @@ const projects =  [
   }
 ]
 
-function Projects() {
+const Projects:  React.FC = ()  => {
   return (
     <section className='max-w-[1640px] mx-auto p-4' id="projects">
       <h3 className='text-2xl text-[#42446E] font-extrabold my-10 text-center'>Projects</h3>
