@@ -3,6 +3,8 @@ import dbConnect from "../../../libs/mongoose";
 import Contact from "../../../models/Contact";
 import { signUpSchema } from "../../../libs/types";
 
+dbConnect();
+
 const ContactForm = async (prevState: any, formData: FormData ) => {
   await dbConnect();
   try {
