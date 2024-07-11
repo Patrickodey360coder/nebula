@@ -49,10 +49,10 @@ function Nav() {
               <nav>
                 <ul className="flex flex-col font-bold p-4">
                   <li className="text-xl py-4 flex"><Link href="/">Home</Link></li>
-                  <li className="text-xl py-4 flex"><Link href="/about">About</Link></li>
-                  <li className="text-xl py-4 flex"><Link href="/techstack">Tech-Stack</Link></li>
-                  <li className="text-xl py-4 flex"><Link href="/project">Projects</Link></li>
-                  <li className="text-xl py-4 flex"><Link href="/contact">Contacts</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="#about">About</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="#techstack">Tech-Stack</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="#project">Projects</Link></li>
+                  <li className="text-xl py-4 flex"><Link href="#contact">Contacts</Link></li>
                   <li className="text-xl py-4 flex"><Link href="/blog">Blog</Link></li>
                 </ul>
               </nav>
