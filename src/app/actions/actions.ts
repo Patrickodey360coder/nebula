@@ -30,7 +30,6 @@ const ContactForm = async (prevState: any, formData: FormData ) => {
 
       return {
         message: "Form Submitted Successfully",
-        errors: {}
       }
 
   } catch (error) {

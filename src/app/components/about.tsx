@@ -14,11 +14,11 @@ function About() {
 
 
   return (
-    <section className="max-w-[1640px] p-4 mx-auto">
+    <section className="max-w-[1640px] p-4 mx-auto" id="about">
       <h3 className="text-2xl text-[#42446E] font-extrabold my-10 text-center">About</h3>
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="image">
-          <Lottie options={defaultOptions} height={400} width={400} />
+        <div className="image mx-auto">
+          <Lottie options={defaultOptions} height={400} width={300} />
         </div>
 
         <div className="description text-[#666666] md:p-5">

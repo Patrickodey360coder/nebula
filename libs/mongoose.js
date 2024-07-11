@@ -8,8 +8,13 @@ if(!uri) {
 export default async function dbConnect() {
   try {
     await mongoose.connect(uri)
+    let cached = global.mongoose;
+    if(!cached) {
+      cached = global.mongoose = {conn: null, promise: null}
+    }
     console.log("database has been connected")
   } catch(error) {
-    console.log(error);
+    handleError(error)
+    console.log(error)
   }
 }

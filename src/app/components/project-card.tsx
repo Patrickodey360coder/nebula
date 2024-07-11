@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-type Props = {
+type ProjectCardProps = {
   title: string;
   picture: string;
   preview: string;
-  github: string;
+  github?: string;
   description: string;
 }
 
-function ProjectCard({title, picture, preview, github, description}: Props) {
+function ProjectCard({title, picture, preview, github, description}: ProjectCardProps) {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-md">
       <Image src={picture} alt={title} width={500} height={500} />
