@@ -10,7 +10,6 @@ import { usePathname, useSearchParams } from 'next/navigation'
 function Nav() {
   const [open, setOpen] = useState<boolean>(false);
   const path = usePathname();
-  console.log(path)
 
   const toggleSidebar = () => {
     setOpen(!open);
