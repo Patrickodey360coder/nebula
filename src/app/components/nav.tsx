@@ -4,7 +4,6 @@ import Link from "next/link";
 import { FaCode } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-import { useRouter } from "next/navigation";
 import { usePathname, useSearchParams } from 'next/navigation'
 
 

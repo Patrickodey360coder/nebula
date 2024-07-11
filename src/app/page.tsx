@@ -11,8 +11,8 @@ export default async function Home() {
     <main className="overflow-hidden">
       <Nav/>
       <Hero />
-      <TechStack />
       <About />
+      <TechStack />
       <Projects />
       <Contact />
       <Footer />
