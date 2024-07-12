@@ -2,14 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "next.config.js",
-      "use": "@vercel/next"
+      "src": "api/*.js",
+      "use": "@vercel/node"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api"
+      "src": "/api/(.*)",
+      "methods": ["GET", "POST"],
+      "dest": "api/$1.js",
+      "headers": {
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Referrer-Policy": "no-referrer"
+      },
+      "config": {
+        "timeout": 30000 
+      }
     }
   ]
 }
