@@ -15,9 +15,6 @@
         "Cache-Control": "no-store",
         "Pragma": "no-cache",
         "Referrer-Policy": "no-referrer"
-      },
-      "config": {
-        "timeout": 30000 
       }
     }
   ]
