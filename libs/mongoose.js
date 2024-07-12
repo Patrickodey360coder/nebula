@@ -7,6 +7,7 @@ if(!uri) {
 
 export default async function dbConnect() {
   try {
+    console.log("database")
     await mongoose.connect(uri)
     let cached = global.mongoose;
     if(!cached) {
@@ -15,5 +16,6 @@ export default async function dbConnect() {
     console.log("database has been connected")
   } catch(error) {
     handleError(error)
+    console.log(error)
   }
 }
