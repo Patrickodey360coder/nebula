@@ -3,8 +3,6 @@ import dbConnect from "../../../libs/mongoose";
 import Contact from "../../../models/Contact";
 import { signUpSchema } from "../../../libs/types";
 
-dbConnect();
-
 const ContactForm = async (prevState: any, formData: FormData ) => {
   await dbConnect();
   try {
@@ -32,7 +30,6 @@ const ContactForm = async (prevState: any, formData: FormData ) => {
 
       return {
         message: "Form Submitted Successfully",
-        errors: {}
       }
 
   } catch (error) {
