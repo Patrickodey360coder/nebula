@@ -1,7 +1,5 @@
-export async function GET(request: Request) {
-  return Response.json({message: "Hello World"})
-}
+import { NextApiRequest, NextApiResponse } from "next";
 
-export async function POST() {
-
+export async function GET(req: NextApiRequest) {
+  return Response.json({message: "Hello World"});
 }

@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import Contact from '../actions/actions'
+import Contact from '../actions/contact-actions'
 import SubmitButton from './button';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
