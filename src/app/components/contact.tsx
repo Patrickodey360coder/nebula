@@ -24,8 +24,7 @@ const ContactForm = () => {
     formData.append('email', data.email);
     formData.append('message', data.message);
 
-    const response = await Contact({}, formData)
-    console.log(response)
+    const response = await Contact({}, formData);
 
     if (response.errors) {
       console.log(response.errors || "An error occoured while submitting the form...");

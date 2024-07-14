@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { useForm } from 'react-hook-form'
 import { BlogSchema, TBlogSchema } from '../../../../libs/types';
 import { zodResolver } from '@hookform/resolvers/zod';
-
+import Blog from '@/app/actions/blog-actions';
 
 const Page = () => {
 
@@ -20,7 +20,16 @@ const Page = () => {
    const [ showErrorAlert, setShowErrorAlert] = useState(false)
 
   const onSubmit = async (data: TBlogSchema) => {
-    console.log(data)
+    const formData = new FormData();
+    formData.append('title', data.title);
+    formData.append('author', data.author);
+    formData.append('content', data.content);
+
+    const response = await Blog(formData);
+
+    if (response.errors) {
+      console.log(response.errors || "An error occoured while submitting the form")
+    }
   } 
 
   return (
