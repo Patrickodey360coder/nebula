@@ -12,8 +12,8 @@ export default async function dbConnect() {
     if(!cached) {
       cached = global.mongoose = {conn: null, promise: null}
     }
-    console.log("database has been connected")
+    console.error("database has been connected")
   } catch(error) {
-    console.error("Database connection error", error)
+    console.error("Database connection error")
   }
 }
