@@ -41,7 +41,7 @@ const projects: Project[] =  [
 const Projects:  React.FC = ()  => {
   return (
     <section className='max-w-[1640px] mx-auto p-4' id="projects">
-      <h3 className='text-2xl text-[#42446E] font-extrabold my-10 text-center'>Projects</h3>
+      <h3 className='text-2xl font-extrabold my-10 text-center'>Projects</h3>
       <div className="grid sm:grid-cols-1 md:grid-cols-4 gap-y-6 md:gap-4 place-items-center">
         {projects.map(project => (
           <ProjectCard key={project.title} {...project} />

@@ -15,8 +15,8 @@ function ProjectCard({title, picture, preview, github, description}: ProjectCard
       <Image src={picture} alt={title} width={500} height={500} />
 
       <div className="px-4 md:px-4 py-2 md:py-4">
-        <div className="font-bold text-xl my-2 text-[#42446E]">{title}</div>
-        <p className="text-[#666666] text-sm my-2">
+        <div className="font-bold text-xl my-2">{title}</div>
+        <p className="text-sm my-2">
           {description}
         </p>
 
