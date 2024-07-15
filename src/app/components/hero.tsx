@@ -33,10 +33,10 @@ function Hero() {
     <section className="min-h-[600px] max-w-[1640px] sm:min-h-[500px] md:min-h-[700px] w-full p-4 flex flex-cols-2 mx-auto">
       <div className='w-full flex items-center'>
         <div className="w-full">
-          <h3 className='text-2xl md:text-3xl lg:text-4xl text-[#42446E] font-extrabold'>Hi 👋,</h3>
-          <h1 className='text-4xl md:text-4xl lg:text-7xl my-2 text-[#42446E] font-extrabold'>I am Patrick Odey</h1>
-          <h3 className='text-2xl md:text-2xl lg:text-3xl mb-1 text-[#42446E] font-extrabold'>Software & Developer Relations Engineer</h3>
-          <span ref={element} className="text-[#42446E] md:text-2xl" />
+          <h3 className='text-2xl md:text-3xl lg:text-4xl font-extrabold'>Hi 👋,</h3>
+          <h1 className='text-4xl md:text-4xl lg:text-7xl my-2 font-extrabold'>I am Patrick Odey</h1>
+          <h3 className='text-2xl md:text-2xl lg:text-3xl mb-1 font-extrabold'>Software & Developer Relations Engineer</h3>
+          <span ref={element} className="md:text-2xl" />
 
           <div className='my-5 flex flex-row gap-4 text-[#42446E]'>
             <Link href="https://drive.google.com/file/d/1yVclSCxCTWojuAkS_p0nqWqo_OW7NB6A/view?usp=sharing" target="_blank">
