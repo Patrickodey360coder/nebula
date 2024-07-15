@@ -25,14 +25,14 @@ function Nav() {
     setOpen(!open);
   }
   return (
-    <nav className='max-w-[1640px] mx-auto flex justify-between items-center p-4 text-[#42446E]'>
+    <nav className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
       <div className='logo cursor-pointer'>
         <FaCode size={30} />
       </div>
 
       <div className='hidden md:flex justify-between'>
         <Link href="/" className={`mx-3 py-3 cursor-pointer ${path === "/" ? "active" : ""}`}>Home</Link>
-        <Link href="#about" className={`mx-3 py-3 text-[#666666] cursor-pointer ${path === "#about" ? "active" : ""}`}>About</Link>
+        <Link href="#about" className={`mx-3 py-3 cursor-pointer ${path === "#about" ? "active" : ""}`}>About</Link>
         <Link href="#techstack" className={`mx-3 py-3 cursor-pointer ${path === "#techstack" ? "active" : ""}`}>Tech-Stack</Link>
         <Link href="#projects" className={`mx-3 py-3 cursor-pointer ${path === "#projects" ? "active" : ""}`}>Projects</Link>
         <Link href="#contact" className={`mx-3 py-3 cursor-pointer ${path === "#contact" ? "active" : ""}`}>Contact</Link>
