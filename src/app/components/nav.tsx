@@ -25,7 +25,7 @@ function Nav() {
     setOpen(!open);
   }
   return (
-    <nav className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
+    <nav className='max-w-[1280px] mx-auto flex justify-between items-center p-4'>
       <div className='logo cursor-pointer'>
         <FaCode size={30} />
       </div>
