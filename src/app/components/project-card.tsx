@@ -34,8 +34,6 @@ function ProjectCard({title, picture, preview, github, description}: ProjectCard
           }
         </div>
       </div>
-
-
     </div>
   )
 }
