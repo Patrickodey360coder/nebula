@@ -17,16 +17,75 @@ function TechStack() {
       <h3 className='text-center text-2xl font-extrabold my-10'>My Tech Stack</h3>
 
       <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-y-6 mt-5 '>
-        <div className="text-5xl text-[#00D8FF]"><FaReact /></div>
-        <div className="text-5xl"><SiNextdotjs /></div>
-        <div className="text-5xl text-[#3078C6]"><SiTypescript /></div>
-        <div className="text-5xl text-[#663399]"><GrGatsbyjs /></div>
-        <div className="text-5xl text-[#5FA04F]"><FaNode /></div>
-        <div className="text-5xl"><SiFastify /></div>
-        <div className="text-5xl"><SiExpress /></div>
-        <div className="text-5xl text-[#5967D8]"><SiPrisma /></div>
-        <div className="text-5xl text-[#01ED64]"><SiMongodb /></div>
-        <div className=""><Image src='/images/harperdb.png' height={80} width={80} alt="HaperDb"/></div>
+        <div className="grid grid-cols-1">
+          <div className="text-5xl text-[#00D8FF] justify-self-center">
+            <FaReact />
+          </div>
+          <p className="text-center">React.js</p>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="text-5xl justify-self-center">
+            <SiNextdotjs />
+          </div>
+          <p className="text-center">Next.js</p>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="text-5xl text-[#3078C6] justify-self-center ">
+            <SiTypescript />
+          </div>
+          <p className="text-center">Typescript</p>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="text-5xl text-[#663399] justify-self-center">
+            <GrGatsbyjs />
+          </div>
+          <p className="text-center">Gatsby.js</p>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="text-5xl text-[#5FA04F] justify-self-center">
+            <FaNode />
+          </div>
+          <p className="text-center">Node.js</p>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="text-5xl justify-self-center">
+            <SiFastify />
+          </div>
+          <p className="text-center">Fastify.js</p>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="text-5xl justify-self-center">
+            <SiExpress />
+          </div>
+          <p className="text-center">Express.js</p>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="text-5xl text-[#5967D8] justify-self-center">
+            <SiPrisma />
+          </div>
+          <p className="text-center">Prisma</p>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="text-5xl text-[#01ED64] justify-self-center">
+            <SiMongodb />
+          </div>
+          <p className="text-center">MongoDB</p>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="justify-self-center">
+            <Image src='/images/harperdb.png' height={50} width={50} alt="HaperDb"/>
+          </div>
+          <p className="text-center">React.js</p>
+        </div>
       </div>
     </section>
   )
