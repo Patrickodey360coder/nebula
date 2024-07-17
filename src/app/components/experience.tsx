@@ -11,21 +11,26 @@ import {
 
 const Experience = () => {
   return (
-    <section className="max-w-[1280px] p-4 mx-auto" id="experience">
+    <section className="max-w-[700px] p-4 mx-auto" id="experience">
       <h3 className="text-center text-2xl font-extrabold my-10 ">Experience</h3>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mx-auto'>
+      <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-3 mx-auto'>
         <Card>
           <CardHeader>
             <CardTitle>Developer Relations Engineer</CardTitle>
             <CardDescription>Storyblok 2022 - 2024</CardDescription>
           </CardHeader>
           <CardContent>
-            <p>Card Content</p>
+            <ul className='list-disc list-outside px-2 md:px-4'>
+              <li>Took ownership maintaining Gatsby Storyblok SDK</li>
+              <li>Created and maintained educational resources to help developers get started with Storyblok.</li>
+              <li>Conducted live demos showcasing Storyblok features and capabilities.</li>
+              <li>Represented Storyblok at various conferences.</li>
+              <li>Engaged with the developer community to foster a strong and supportive network.</li>
+              <li>Collaborated with the product team to prioritize and implement enhancements based on user feedback.</li>
+              <li>Developed video tutorials and webinars to facilitate learning.</li>
+            </ul>
           </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
         </Card>
 
         <Card>
@@ -34,7 +39,15 @@ const Experience = () => {
             <CardDescription>O2 Digital 2022</CardDescription>
           </CardHeader>
           <CardContent>
-            <p>Card Content</p>
+            <ul className='list-disc list-outside px-2 md:px-4'>
+                <li>Took ownership maintaining Gatsby Storyblok SDK</li>
+                <li>Created and maintained educational resources to help developers get started with Storyblok.</li>
+                <li>Conducted live demos showcasing Storyblok features and capabilities.</li>
+                <li>Represented Storyblok at various conferences.</li>
+                <li>Engaged with the developer community to foster a strong and supportive network.</li>
+                <li>Collaborated with the product team to prioritize and implement enhancements based on user feedback.</li>
+                <li>Developed video tutorials and webinars to facilitate learning.</li>
+              </ul>
           </CardContent>
           <CardFooter>
             <p>Card Footer</p>
@@ -47,7 +60,15 @@ const Experience = () => {
             <CardDescription>Reskill Americans</CardDescription>
           </CardHeader>
           <CardContent>
-            <p>Card Content</p>
+            <ul className='list-disc list-outside px-2 md:px-4'>
+                <li>Took ownership maintaining Gatsby Storyblok SDK</li>
+                <li>Created and maintained educational resources to help developers get started with Storyblok.</li>
+                <li>Conducted live demos showcasing Storyblok features and capabilities.</li>
+                <li>Represented Storyblok at various conferences.</li>
+                <li>Engaged with the developer community to foster a strong and supportive network.</li>
+                <li>Collaborated with the product team to prioritize and implement enhancements based on user feedback.</li>
+                <li>Developed video tutorials and webinars to facilitate learning.</li>
+              </ul>
           </CardContent>
           <CardFooter>
             <p>Card Footer</p>
