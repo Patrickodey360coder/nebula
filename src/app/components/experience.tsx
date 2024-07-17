@@ -40,13 +40,13 @@ const Experience = () => {
           </CardHeader>
           <CardContent>
             <ul className='list-disc list-outside px-2 md:px-4'>
-                <li>Took ownership maintaining Gatsby Storyblok SDK</li>
-                <li>Created and maintained educational resources to help developers get started with Storyblok.</li>
-                <li>Conducted live demos showcasing Storyblok features and capabilities.</li>
-                <li>Represented Storyblok at various conferences.</li>
-                <li>Engaged with the developer community to foster a strong and supportive network.</li>
-                <li>Collaborated with the product team to prioritize and implement enhancements based on user feedback.</li>
-                <li>Developed video tutorials and webinars to facilitate learning.</li>
+                <li>Worked independently as the sole frontend engineer.</li>
+                <li>Took full ownership of frontend development projects from conception to deployment.</li>
+                <li>Ensured cross-browser compatibility and responsive design.</li>
+                <li>Coordinated with backend developers and other stakeholders to ensure seamless integration and functionality.</li>
+                <li>Identified and resolved technical challenges independently.</li>
+                <li>Conducted user testing and gathered feedback to improve UI/UX.</li>
+                <li>Implemented effective solutions to meet client requirements and project goals.</li>
               </ul>
           </CardContent>
           <CardFooter>
