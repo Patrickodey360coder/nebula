@@ -61,13 +61,13 @@ const Experience = () => {
           </CardHeader>
           <CardContent>
             <ul className='list-disc list-outside px-2 md:px-4'>
-                <li>Took ownership maintaining Gatsby Storyblok SDK</li>
-                <li>Created and maintained educational resources to help developers get started with Storyblok.</li>
-                <li>Conducted live demos showcasing Storyblok features and capabilities.</li>
-                <li>Represented Storyblok at various conferences.</li>
-                <li>Engaged with the developer community to foster a strong and supportive network.</li>
-                <li>Collaborated with the product team to prioritize and implement enhancements based on user feedback.</li>
-                <li>Developed video tutorials and webinars to facilitate learning.</li>
+                <li>Created instructional materials, including lesson plans, slides, and coding exercises.</li>
+                <li>Delivered engaging lectures and interactive coding sessions.</li>
+                <li>Helped students build strong portfolios to showcase their skills.</li>
+                <li>Led hands-on projects to give students real-world development experience.</li>
+                <li>Facilitated collaborative group projects to enhance teamwork and problem-solving skills.</li>
+                <li>Organized and participated in coding bootcamps and workshops..</li>
+                <li>Conducted mock interviews and resume reviews to prepare students for job applications.</li>
               </ul>
           </CardContent>
           <CardFooter>
