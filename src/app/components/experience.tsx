@@ -8,7 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-
 const Experience = () => {
   return (
     <section className="max-w-[700px] p-4 mx-auto" id="experience">
@@ -40,18 +39,15 @@ const Experience = () => {
           </CardHeader>
           <CardContent>
             <ul className='list-disc list-outside px-2 md:px-4'>
-                <li>Worked independently as the sole frontend engineer.</li>
-                <li>Took full ownership of frontend development projects from conception to deployment.</li>
-                <li>Ensured cross-browser compatibility and responsive design.</li>
-                <li>Coordinated with backend developers and other stakeholders to ensure seamless integration and functionality.</li>
-                <li>Identified and resolved technical challenges independently.</li>
-                <li>Conducted user testing and gathered feedback to improve UI/UX.</li>
-                <li>Implemented effective solutions to meet client requirements and project goals.</li>
-              </ul>
+              <li>Worked independently as the sole frontend engineer.</li>
+              <li>Took full ownership of frontend development projects from conception to deployment.</li>
+              <li>Ensured cross-browser compatibility and responsive design.</li>
+              <li>Coordinated with backend developers and other stakeholders to ensure seamless integration and functionality.</li>
+              <li>Identified and resolved technical challenges independently.</li>
+              <li>Conducted user testing and gathered feedback to improve UI/UX.</li>
+              <li>Implemented effective solutions to meet client requirements and project goals.</li>
+            </ul>
           </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
         </Card>
 
         <Card>
@@ -61,18 +57,15 @@ const Experience = () => {
           </CardHeader>
           <CardContent>
             <ul className='list-disc list-outside px-2 md:px-4'>
-                <li>Created instructional materials, including lesson plans, slides, and coding exercises.</li>
-                <li>Delivered engaging lectures and interactive coding sessions.</li>
-                <li>Helped students build strong portfolios to showcase their skills.</li>
-                <li>Led hands-on projects to give students real-world development experience.</li>
-                <li>Facilitated collaborative group projects to enhance teamwork and problem-solving skills.</li>
-                <li>Organized and participated in coding bootcamps and workshops..</li>
-                <li>Conducted mock interviews and resume reviews to prepare students for job applications.</li>
-              </ul>
+              <li>Created instructional materials, including lesson plans, slides, and coding exercises.</li>
+              <li>Delivered engaging lectures and interactive coding sessions.</li>
+              <li>Helped students build strong portfolios to showcase their skills.</li>
+              <li>Led hands-on projects to give students real-world development experience.</li>
+              <li>Facilitated collaborative group projects to enhance teamwork and problem-solving skills.</li>
+              <li>Organized and participated in coding bootcamps and workshops..</li>
+              <li>Conducted mock interviews and resume reviews to prepare students for job applications.</li>
+            </ul>
           </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
         </Card>
       </div>
 
