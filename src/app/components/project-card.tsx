@@ -8,10 +8,11 @@ type ProjectCardProps = {
   github?: string;
   description: string;
 }
+import { Card } from "@/components/ui/card"
 
 function ProjectCard({title, picture, preview, github, description}: ProjectCardProps) {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-md">
+    <Card className="max-w-sm rounded overflow-hidden shadow-md">
       <Image src={picture} alt={title} width={500} height={500} />
 
       <div className="px-4 md:px-4 py-2 md:py-4">
@@ -34,7 +35,7 @@ function ProjectCard({title, picture, preview, github, description}: ProjectCard
           }
         </div>
       </div>
-    </div>
+    </Card>
   )
 }
 

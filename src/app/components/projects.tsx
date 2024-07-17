@@ -15,26 +15,26 @@ const projects: Project[] =  [
     picture: "/images/covistrain.jpg",
     preview: "https://mrrobot-covidtracer.netlify.app/",
     github: "https://github.com/Patrickodey360coder/COVID-19-TRACKER",
-    description: " An application that tracks COVID-19",
+    description: " An application that tracks COVID-19. Built wiith vanilla JS.",
   },
   {
     title: "Metro Care",
     picture: "/images/metrocare.jpg",
     preview: "http://metrocareservices.com.au/",
-    description: "An NDIS service in Australia. Built with Laravel",
+    description: "An NDIS service in Australia. Built with Laravel.",
   },
   {
     title: "LiteStack",
     picture: "/images/litestack.jpg",
     preview: "https://mrrobot-covidtracer.netlify.app/",
-    description: "A fast growing tech start-up. Built with Laravel",
+    description: "A fast growing tech start-up. Built with Laravel.",
   },
   {
     title: "E - Bike",
     picture: "/images/ebike.png",
     preview: "https://mrrobot-covidtracer.netlify.app/",
     github: "https://github.com/Patrickodey360coder/eBike",
-    description: "E - Bike is a fiction mordern bike store",
+    description: "E - Bike is a fiction mordern bike store. Built with React.js",
   }
 ]
 
