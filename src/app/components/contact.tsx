@@ -37,7 +37,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className='max-w-[1640px] mx-auto'>
+    <section className="max-w-[1640px]" mx-auto id="contact">
       <div className="isolate px-6 py-24 sm:py-32 lg:px-8"> 
         <div className="mx-auto max-w-2xl text-center">
           <h3 className="text-2xl font-extrabold text-center tracking-tight">
