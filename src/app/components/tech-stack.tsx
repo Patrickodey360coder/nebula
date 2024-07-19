@@ -9,8 +9,6 @@ import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import Image from "next/image";
 
-
-
 function TechStack() {
   return (
     <section className='max-w-[1280px] p-4 my-10 mx-auto' id="techstack">
