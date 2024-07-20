@@ -77,7 +77,6 @@
 
   nav a {
     position: relative;
-    /* color: #666666; */
     text-decoration: none;
     transition: color 0.3s ease;
   }
