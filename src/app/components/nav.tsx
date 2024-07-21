@@ -14,6 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { motion } from "framer-motion";
 
 
 function Nav() {
@@ -25,8 +26,18 @@ function Nav() {
     setOpen(!open);
   }
   return (
-    <nav className='max-w-[1280px] mx-auto flex justify-between items-center p-4'>
-      <div className='logo cursor-pointer'>
+    <motion.nav 
+      initial={{ y: -100 }}
+      animate={{  y: 0 }}
+      transition={{
+        duration: 0.3,
+        delay: 0.2,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}
+      className='max-w-[1280px] mx-auto flex justify-between items-center p-4'>
+      <div 
+
+        className='logo cursor-pointer'>
         <FaCode size={30} />
       </div>
 
@@ -92,7 +103,7 @@ function Nav() {
           </>
         )
       }
-    </nav>
+    </motion.nav>
   )
 }
 
