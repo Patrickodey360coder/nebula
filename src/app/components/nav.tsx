@@ -13,7 +13,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 import { motion } from "framer-motion";
 
 
@@ -32,7 +32,9 @@ function Nav() {
       transition={{
         duration: 0.5,
         delay: 0,
-        ease: [0, 0.5, 0.7, 1]
+        ease: [0, 0.5, 0.7, 1],
+        type: 'spring',
+        stiffness: 300
       }}
       className='max-w-[1280px] mx-auto flex justify-between items-center p-4'>
       <div 

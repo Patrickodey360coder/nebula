@@ -49,12 +49,24 @@ function Hero() {
 
           <div className='my-5 flex flex-row gap-4'>
             <Link href="https://drive.google.com/file/d/1yVclSCxCTWojuAkS_p0nqWqo_OW7NB6A/view?usp=sharing" target="_blank">
-              <Button variant="outline">Resume</Button>
+              <motion.div 
+                whileHover={{
+                  scale: 1.1,
+                }}
+              >
+                <Button variant="outline">Resume</Button>
+              </motion.div>
             </Link>
 
+          <motion.div
+            whileHover={{
+              scale: 1.1,
+            }}
+          >
             <Link href="https://github.com/Patrickodey360coder" target="_blank">
-              <Button variant="outline">GitHub</Button>
+                <Button variant="outline">GitHub</Button>
             </Link>
+          </motion.div>      
           </div>
         </motion.div>
       </div>
