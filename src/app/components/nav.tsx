@@ -27,12 +27,12 @@ function Nav() {
   }
   return (
     <motion.nav 
-      initial={{ y: -100 }}
-      animate={{  y: 0 }}
+      initial={{ y: -250, opacity: 0 }}
+      animate={{  y: 0, opacity: 1 }}
       transition={{
-        duration: 0.3,
+        duration: 0.5,
         delay: 0.2,
-        ease: [0, 0.71, 0.2, 1.01]
+        // ease: [0, 0.71, 0.2, 1.01]
       }}
       className='max-w-[1280px] mx-auto flex justify-between items-center p-4'>
       <div 
