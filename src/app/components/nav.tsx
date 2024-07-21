@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 
 function Nav() {
@@ -33,7 +33,6 @@ function Nav() {
         duration: 0.5,
         delay: 0,
         ease: [0, 0.5, 0.7, 1]
-        // ease: [0, 0.71, 0.2, 1.01]
       }}
       className='max-w-[1280px] mx-auto flex justify-between items-center p-4'>
       <div 
