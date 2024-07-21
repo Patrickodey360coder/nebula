@@ -37,7 +37,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 1,
+            duration: 0.8,
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01]
           }}
@@ -64,8 +64,8 @@ function Hero() {
           initial={{ scale: 0 }}
           animate={{ rotate: 360, scale: 1 }}
           transition={{
-            duration: 0.8,
-            delay: 0.1,
+            duration: 1,
+            delay: 0.7,
             type: "spring",
             stiffness: 260,
             damping: 20
