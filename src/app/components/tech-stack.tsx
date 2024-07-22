@@ -18,7 +18,8 @@ function TechStack() {
 
       <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-y-10 mt-5 '>
         <motion.div whileHover={{
-            scale: 1.3
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
           }} className="grid grid-cols-1">
           <div className="text-5xl text-[#00D8FF] justify-self-center">
             <FaReact/>
@@ -26,19 +27,25 @@ function TechStack() {
           <p className="text-center">React.js</p>
         </motion.div>
 
-        <div className="grid grid-cols-1">
+        <motion.div whileHover={{
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+          }} className="grid grid-cols-1">
           <div className="text-5xl justify-self-center">
             <SiNextdotjs />
           </div>
           <p className="text-center">Next.js</p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1">
-          <div className="text-5xl text-[#3078C6] justify-self-center ">
+        <motion.div whileHover={{
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+          }} className="grid grid-cols-1">
+          <div  className="text-5xl text-[#3078C6] justify-self-center ">
             <SiTypescript />
           </div>
           <p className="text-center">Typescript</p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1">
           <div className="text-5xl text-[#663399] justify-self-center">
