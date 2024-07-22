@@ -5,7 +5,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
+import { motion } from 'framer-motion';
 
 const Experience = () => {
   return (
