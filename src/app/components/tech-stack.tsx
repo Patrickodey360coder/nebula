@@ -8,10 +8,11 @@ import { SiPrisma } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function TechStack() {
   return (
-    <section className='max-w-[1280px] p-4 my-10 mx-auto' id="techstack">
+    <motion.section className='max-w-[1280px] p-4 my-10 mx-auto' id="techstack">
       <h3 className='text-center text-2xl font-extrabold my-10'>My Tech Stack</h3>
 
       <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-y-10 mt-5 '>
@@ -85,7 +86,7 @@ function TechStack() {
           <p className="text-center">React.js</p>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
