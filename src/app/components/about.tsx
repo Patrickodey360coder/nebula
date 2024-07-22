@@ -13,9 +13,6 @@ function About() {
     }
   };
 
-  
-
-
   return (
     <motion.section className="max-w-[1280px] p-4 mx-auto" id="about">
       <h3 className="text-2xl font-extrabold my-10 text-center">About</h3>
