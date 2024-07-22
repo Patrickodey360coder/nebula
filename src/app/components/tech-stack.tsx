@@ -1,3 +1,4 @@
+'use client'
 import { FaReact } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
@@ -12,16 +13,18 @@ import { motion } from "framer-motion";
 
 function TechStack() {
   return (
-    <motion.section className='max-w-[1280px] p-4 my-10 mx-auto' id="techstack">
-      <h3 className='text-center text-2xl font-extrabold my-10'>My Tech Stack</h3>
+    <section className='max-w-[1280px] p-4 my-10 mx-auto' id="techstack">
+      <motion.h3 className='text-center text-2xl font-extrabold my-10'>My Tech Stack</motion.h3>
 
       <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-y-10 mt-5 '>
-        <div className="grid grid-cols-1">
+        <motion.div whileHover={{
+            scale: 1.3
+          }} className="grid grid-cols-1">
           <div className="text-5xl text-[#00D8FF] justify-self-center">
-            <FaReact />
+            <FaReact/>
           </div>
           <p className="text-center">React.js</p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1">
           <div className="text-5xl justify-self-center">
@@ -86,7 +89,7 @@ function TechStack() {
           <p className="text-center">React.js</p>
         </div>
       </div>
-    </motion.section>
+    </section>
   )
 }
 
