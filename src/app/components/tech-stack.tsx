@@ -13,7 +13,16 @@ import { motion } from "framer-motion";
 
 function TechStack() {
   return (
-    <section className='max-w-[1280px] p-4 my-10 mx-auto' id="techstack">
+    <motion.section 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity:1 }} 
+      transition={{
+        duration: 0.7,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}
+      viewport={{ once: true }}
+      className='max-w-[1280px] p-4 my-10 mx-auto' id="techstack">
       <motion.h3 className='text-center text-2xl font-extrabold my-10'>My Tech Stack</motion.h3>
 
       <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-y-10 mt-5 '>
@@ -47,56 +56,77 @@ function TechStack() {
           <p className="text-center">Typescript</p>
         </motion.div>
 
-        <div className="grid grid-cols-1">
+        <motion.div whileHover={{
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+          }} className="grid grid-cols-1">
           <div className="text-5xl text-[#663399] justify-self-center">
             <GrGatsbyjs />
           </div>
           <p className="text-center">Gatsby.js</p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1">
+        <motion.div whileHover={{
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+          }} className="grid grid-cols-1">
           <div className="text-5xl text-[#5FA04F] justify-self-center">
             <FaNode />
           </div>
           <p className="text-center">Node.js</p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1">
+        <motion.div whileHover={{
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+          }} className="grid grid-cols-1">
           <div className="text-5xl justify-self-center">
             <SiFastify />
           </div>
           <p className="text-center">Fastify.js</p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1">
+        <motion.div whileHover={{
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+          }} className="grid grid-cols-1">
           <div className="text-5xl justify-self-center">
             <SiExpress />
           </div>
           <p className="text-center">Express.js</p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1">
+        <motion.div whileHover={{
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+          }} className="grid grid-cols-1">
           <div className="text-5xl text-[#5967D8] justify-self-center">
             <SiPrisma />
           </div>
           <p className="text-center">Prisma</p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1">
+        <motion.div whileHover={{
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+          }} className="grid grid-cols-1">
           <div className="text-5xl text-[#01ED64] justify-self-center">
             <SiMongodb />
           </div>
           <p className="text-center">MongoDB</p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1">
+        <motion.div whileHover={{
+            scale: 1.3,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+          }} className="grid grid-cols-1">
           <div className="justify-self-center">
             <Image src='/images/harperdb.png' height={50} width={50} alt="HaperDb"/>
           </div>
           <p className="text-center">React.js</p>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
