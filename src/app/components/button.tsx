@@ -21,7 +21,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({isSubmitting}) => {
         </svg> 
       </div> :
       <div className='grid'>
-        <span className="font-medium">let's talk </span> 
+        <span className="font-medium">let&#39;s talk</span> 
       </div>
     } 
     </button>
