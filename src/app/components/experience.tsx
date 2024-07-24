@@ -12,7 +12,15 @@ import { motion } from 'framer-motion';
 const Experience = () => {
   return (
     <section className="max-w-[700px] p-4 mx-auto" id="experience">
-      <h3 className="text-center text-2xl font-extrabold my-10 ">Experience</h3>
+      <motion.h3 
+        initial={{x: "-100vw"}}
+        animate={{x: 0}}
+        transition={{
+          duration: 0.7,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
+        className="text-center text-2xl font-extrabold my-10 ">Experience</motion.h3>
 
       <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-3 mx-auto'>
         <motion.div       
