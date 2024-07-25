@@ -39,8 +39,8 @@ const ContactForm = () => {
 
   return (
     <motion.section 
-    initial={{ x: "-100vw" }}
-    whileInView={{ x: 0 }}
+    initial={{ opacity: -1 }}
+    whileInView={{ opacity: 0 }}
     className='max-w-[1280px] mx-auto'>
       <div className="isolate px-6 py-24 sm:py-32 lg:px-8"> 
         <div className="mx-auto max-w-2xl text-center">
