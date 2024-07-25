@@ -97,7 +97,6 @@ const ContactForm = () => {
           </div>
         )}
 
-
         <form onSubmit={handleSubmit(onSubmit)} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
@@ -160,7 +159,6 @@ const ContactForm = () => {
                   className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
                 {errors.email && <small className='text-red-500'>{errors.email.message as string}</small> }
-
               </div>
             </div>
 
