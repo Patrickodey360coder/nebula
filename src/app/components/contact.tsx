@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { TSignUpSchema } from '../../../libs/types';
 import { signUpSchema } from '../../../libs/types';
+import { motion } from "framer-motion"
 
 
 const ContactForm = () => {
@@ -37,7 +38,10 @@ const ContactForm = () => {
   }
 
   return (
-    <section className='max-w-[1280px] mx-auto'>
+    <motion.section 
+    initial={{ x: "-100vw" }}
+    whileInView={{ x: 0 }}
+    className='max-w-[1280px] mx-auto'>
       <div className="isolate px-6 py-24 sm:py-32 lg:px-8"> 
         <div className="mx-auto max-w-2xl text-center">
           <h3 className="text-2xl font-extrabold text-center tracking-tight">
@@ -184,7 +188,7 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

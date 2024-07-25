@@ -12,14 +12,15 @@ import { motion } from 'framer-motion';
 const Experience = () => {
   return (
     <section className="max-w-[700px] p-4 mx-auto" id="experience">
-      <motion.h3 
-        initial={{x: "-100vw"}}
-        animate={{x: 0}}
+      <motion.h3  
+        initial={{ opacity: 0, y: 250 }}
+        whileInView={{ opacity:1, y: 0 }} 
         transition={{
-          duration: 0.7,
-          delay: 0.5,
+          duration: 0.6,
+          delay: 0.3,
           ease: [0, 0.71, 0.2, 1.01]
         }}
+        viewport={{ once: true }}
         className="text-center text-2xl font-extrabold my-10 ">Experience</motion.h3>
 
       <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-3 mx-auto'>
@@ -54,11 +55,10 @@ const Experience = () => {
         <motion.div           
           initial={{ opacity: 0 }}
           whileInView={{ opacity:1 }} 
-          whileHover={{boxShadow: "0px 0px 3px rgb(255,255,255)"}}
           transition={{
             duration: 0.7,
             delay: 0.5,
-            // ease: [0, 0.71, 0.2, 1.01]
+            ease: [0, 0.71, 0.2, 1.01]
           }}
           viewport={{ once: true }}>
           <Card>
@@ -80,23 +80,33 @@ const Experience = () => {
           </Card>
         </motion.div >
 
-        <Card>
-          <CardHeader>
-            <CardTitle>FrontEnd Engineering Educator</CardTitle>
-            <CardDescription>Reskill Americans</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ul className='list-disc list-outside px-2 md:px-4'>
-              <li>Created instructional materials, including lesson plans, slides, and coding exercises.</li>
-              <li>Delivered engaging lectures and interactive coding sessions.</li>
-              <li>Helped students build strong portfolios to showcase their skills.</li>
-              <li>Led hands-on projects to give students real-world development experience.</li>
-              <li>Facilitated collaborative group projects to enhance teamwork and problem-solving skills.</li>
-              <li>Organized and participated in coding bootcamps and workshops..</li>
-              <li>Conducted mock interviews and resume reviews to prepare students for job applications.</li>
-            </ul>
-          </CardContent>
-        </Card>
+        <motion.div           
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity:1 }} 
+          transition={{
+            duration: 0.7,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}
+          viewport={{ once: true }}>
+          <Card>
+            <CardHeader>
+              <CardTitle>FrontEnd Engineering Educator</CardTitle>
+              <CardDescription>Reskill Americans</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className='list-disc list-outside px-2 md:px-4'>
+                <li>Created instructional materials, including lesson plans, slides, and coding exercises.</li>
+                <li>Delivered engaging lectures and interactive coding sessions.</li>
+                <li>Helped students build strong portfolios to showcase their skills.</li>
+                <li>Led hands-on projects to give students real-world development experience.</li>
+                <li>Facilitated collaborative group projects to enhance teamwork and problem-solving skills.</li>
+                <li>Organized and participated in coding bootcamps and workshops..</li>
+                <li>Conducted mock interviews and resume reviews to prepare students for job applications.</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
     </section>
   )
