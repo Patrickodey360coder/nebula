@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { TSignUpSchema } from '../../../libs/types';
 import { signUpSchema } from '../../../libs/types';
+import { motion } from "framer-motion"
 
 
 const ContactForm = () => {
@@ -37,7 +38,15 @@ const ContactForm = () => {
   }
 
   return (
-    <section className='max-w-[1280px] mx-auto'>
+    <motion.section 
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{
+      duration: 0.7,
+      delay: 0.5,
+      ease: [0, 0.71, 0.2, 1.01]
+    }}
+    className='max-w-[1280px] mx-auto'>
       <div className="isolate px-6 py-24 sm:py-32 lg:px-8"> 
         <div className="mx-auto max-w-2xl text-center">
           <h3 className="text-2xl font-extrabold text-center tracking-tight">
@@ -47,7 +56,6 @@ const ContactForm = () => {
             Send me a message here.
           </p>
         </div>
-
 
         {showSuccessAlert && (
           <div className="mx-auto mt-4 max-w-xl sm:mt-6">
@@ -88,7 +96,6 @@ const ContactForm = () => {
             </div>
           </div>
         )}
-
 
         <form onSubmit={handleSubmit(onSubmit)} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -152,7 +159,6 @@ const ContactForm = () => {
                   className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
                 {errors.email && <small className='text-red-500'>{errors.email.message as string}</small> }
-
               </div>
             </div>
 
@@ -184,7 +190,7 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

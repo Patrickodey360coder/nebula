@@ -18,7 +18,7 @@ function About() {
       initial={{x: "-100vw"}}
       animate={{x:0}}
       transition={{
-        duration: 1,
+        duration: 0.5,
         delay: 1,
         ease: [0, 0.71, 0.2, 1.01]
       }}
