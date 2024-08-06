@@ -9,7 +9,7 @@ import Experience from "./components/experience";
 
 export default async function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden scroll-smooth">
       <Nav/>
       <Hero />
       <About />
