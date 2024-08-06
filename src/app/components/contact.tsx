@@ -182,7 +182,7 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
-    </motion.section>
+    </section>
   );
 }
 
