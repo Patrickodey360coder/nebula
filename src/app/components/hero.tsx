@@ -5,7 +5,7 @@ import Typed from 'typed.js';
 import Lottie from 'react-lottie';
 import animationData from '../../lottie/hero.json';
 import Link from 'next/link';
-import { color, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 function Hero() {
   const defaultOptions = {
