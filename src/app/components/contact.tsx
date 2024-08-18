@@ -8,7 +8,6 @@ import { TSignUpSchema } from '../../../libs/types';
 import { signUpSchema } from '../../../libs/types';
 import { motion } from "framer-motion"
 
-
 const ContactForm = () => {
 
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<TSignUpSchema>({
