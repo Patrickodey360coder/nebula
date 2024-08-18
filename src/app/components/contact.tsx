@@ -6,7 +6,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { TSignUpSchema } from '../../../libs/types';
 import { signUpSchema } from '../../../libs/types';
-import { motion } from "framer-motion"
 
 const ContactForm = () => {
 
