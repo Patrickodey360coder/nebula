@@ -8,6 +8,7 @@ import { SiFastify } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
+import { SiMetabase } from "react-icons/si";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -120,10 +121,10 @@ function TechStack() {
             scale: 1.3,
             textShadow: "0px 0px 8px rgb(255,255,255)",
           }} className="grid grid-cols-1">
-          <div className="justify-self-center">
-            <Image src='/images/harperdb.png' height={50} width={50} alt="HaperDb"/>
+          <div className="text-5xl text-[#509EE3] justify-self-center">
+            <SiMetabase />
           </div>
-          <p className="text-center">React.js</p>
+          <p className="text-center">Metabase</p>
         </motion.div>
       </div>
     </motion.section>
