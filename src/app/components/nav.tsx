@@ -50,7 +50,7 @@ function Nav() {
         <Link href="#experience" className={`mx-3 py-3 cursor-pointer ${path === "#experience" ? "active" : ""}`}>Experience</Link>
         <Link href="#projects" className={`mx-3 py-3 cursor-pointer ${path === "#projects" ? "active" : ""}`}>Projects</Link>
         <Link href="#contact" className={`mx-3 py-3 cursor-pointer ${path === "#contact" ? "active" : ""}`}>Contact</Link>
-        <Link href="/blog" className={`mx-3 py-3 cursor-pointer ${path === "/blog" ? "active" : ""}`}>Blog</Link>
+        {/* <Link href="/blog" className={`mx-3 py-3 cursor-pointer ${path === "#" ? "active" : ""}`}>Blog</Link> */}
       </div>
 
       <DropdownMenu>
@@ -98,7 +98,7 @@ function Nav() {
                   <li className="text-xl py-4 flex"><Link href="#techstack">Tech-Stack</Link></li>
                   <li className="text-xl py-4 flex"><Link href="#project">Projects</Link></li>
                   <li className="text-xl py-4 flex"><Link href="#contact">Contacts</Link></li>
-                  <li className="text-xl py-4 flex"><Link href="/blog">Blog</Link></li>
+                  {/* <li className="text-xl py-4 flex"><Link href="/blog">Blog</Link></li> */}
                 </ul>
               </nav>
             </div>
