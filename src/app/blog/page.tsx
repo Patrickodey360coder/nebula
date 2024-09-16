@@ -8,6 +8,7 @@ const Page = () => {
       <h1 className='text-2xl text-center font-bold my-5'>Articles</h1>
       <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
         <Article/>
+        
       </div>
     </section>
   )
