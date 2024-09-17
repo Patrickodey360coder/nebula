@@ -19,7 +19,7 @@ const Page = async () => {
       <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
         {
           blogs.map((blog) => (
-            <Article key={blog.id} title={blog.title} author={blog.author} content={blog.content} />
+            <Article key={blog._id} blog={blog} />
           ))
         }
         
