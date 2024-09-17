@@ -29,7 +29,11 @@ const Page = () => {
 
     if (response.errors) {
       console.log(response.errors || "An error occoured while submitting the form")
+      setShowErrorAlert(!showErrorAlert)
     }
+
+    setShowSuccessAlert(!showSuccessAlert)
+
   } 
 
   return (
