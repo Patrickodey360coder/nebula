@@ -1,6 +1,10 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+  title: string;
+  author: string;
+  content: string;
+}
 
 import Image from 'next/image'
 import Link from 'next/link'
