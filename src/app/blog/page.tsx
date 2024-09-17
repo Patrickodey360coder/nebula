@@ -22,7 +22,6 @@ const Page = async () => {
             <Article key={blog._id} blog={blog} />
           ))
         }
-        
       </div>
     </section>
   )
